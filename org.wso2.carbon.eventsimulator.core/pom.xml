@@ -76,8 +76,6 @@
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
 
                         <Export-Package>
-                            !org.wso2.carbon.eventsimulator.core.internal,
-                            !org.wso2.carbon.eventsimulator.core.internal.*,
                             org.wso2.carbon.eventsimulator.core.*
                         </Export-Package>
                         <Import-Package>

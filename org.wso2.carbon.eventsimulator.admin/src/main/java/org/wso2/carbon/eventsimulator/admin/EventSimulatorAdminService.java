@@ -5,12 +5,13 @@ import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.core.AbstractAdmin;
 import org.wso2.carbon.databridge.commons.StreamDefinition;
 import org.wso2.carbon.eventsimulator.core.EventSimulator;
-
+import org.wso2.carbon.databridge.commons.Attribute;
 
 
 //import org.wso2.carbon.eventsimulator.core.EventSimulator;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by ujitha on 3/11/14.
@@ -38,6 +39,59 @@ public class EventSimulatorAdminService extends AbstractAdmin {
                     eventStreamInfoDtos[index].setStreamVersion(streamDefinition.getVersion());
                     eventStreamInfoDtos[index].setStreamDefinition(streamDefinition.toString());
                     eventStreamInfoDtos[index].setStreamDescription(streamDefinition.getDescription());
+
+                    // Set Meta attributes to EventStreamInfoDtos
+                    List<Attribute> meataDataAttributeList=streamDefinition.getMetaData();
+
+
+                    if(meataDataAttributeList!=null)
+                    {
+                        EventStreamAttributeDto[]  metaDataAttributeArray=new EventStreamAttributeDto[meataDataAttributeList.size()];
+                         for(int i=0;i<metaDataAttributeArray.length;i++)
+                        {
+
+                            metaDataAttributeArray[i] = new EventStreamAttributeDto();
+                            metaDataAttributeArray[i].setAttributeName(meataDataAttributeList.get(i).getName());
+                            metaDataAttributeArray[i].setAttributeType(meataDataAttributeList.get(i).getType().toString());
+
+                        }
+
+                        eventStreamInfoDtos[index].setMetaAttributes(metaDataAttributeArray);
+                    }
+                    //Set correlation attributes to EventStreamInfoDtos
+                    List<Attribute> correlationDataAttributeList=streamDefinition.getCorrelationData();
+
+
+                    if(correlationDataAttributeList!=null)
+                    {
+                        EventStreamAttributeDto[]  correlationDataAttributeArray=new EventStreamAttributeDto[correlationDataAttributeList.size()];
+
+                        for(int j=0;j<correlationDataAttributeArray.length;j++)
+                        {
+                            correlationDataAttributeArray[j]=new EventStreamAttributeDto();
+                            correlationDataAttributeArray[j].setAttributeName(correlationDataAttributeList.get(j).getName());
+                            correlationDataAttributeArray[j].setAttributeType(correlationDataAttributeList.get(j).getType().toString());
+                        }
+
+                        eventStreamInfoDtos[index].setCorrelationAttributes(correlationDataAttributeArray);
+                    }
+                    //Set payload data attributes to EventStreamInfoDtos
+
+                    List<Attribute> payloadDataAttributeList=streamDefinition.getPayloadData();
+
+
+                    if(payloadDataAttributeList!=null)
+                    {
+                        EventStreamAttributeDto[] payloadDataAttributesArray =new EventStreamAttributeDto[payloadDataAttributeList.size()];
+                        for(int k=0;k<payloadDataAttributesArray.length;k++)
+                        {
+                            payloadDataAttributesArray[k]=new EventStreamAttributeDto();
+                            payloadDataAttributesArray[k].setAttributeName(payloadDataAttributeList.get(k).getName());
+                            payloadDataAttributesArray[k].setAttributeType(payloadDataAttributeList.get(k).getType().toString());
+                        }
+
+                        eventStreamInfoDtos[index].setPayloadAttributes(payloadDataAttributesArray);
+                    }
                     index++;
                 }
                 return eventStreamInfoDtos;

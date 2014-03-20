@@ -12,7 +12,7 @@ import org.wso2.carbon.eventsimulator.core.EventSimulator;
  * This class is used to get the EventFormatter service.
  *
  * @scr.component name="eventSimulatorAdmin.component" immediate="true"
- * @scr.reference name="eventSimulator.service"
+ * @scr.reference name="eventSimulatorService.component"
  * interface="org.wso2.carbon.eventsimulator.core.EventSimulator" cardinality="1..1"
  * policy="dynamic" bind="setEventSimulatorService" unbind="unsetEventSimulatorService"
  */
@@ -20,6 +20,7 @@ import org.wso2.carbon.eventsimulator.core.EventSimulator;
 public class EventSimulatorAdminDS {
 
     protected void activate(ComponentContext context) {
+        System.out.println("Event Simulator Admin **************");
 
     }
 

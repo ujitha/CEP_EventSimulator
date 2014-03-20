@@ -6,9 +6,8 @@
         <additionalProperties>
           <property key="Bundle-Description" value="org.wso2.carbon.eventsimulator.core provides the back-endfunctionalities" />
           <property key="Bundle-Name" value="org.wso2.carbon.eventsimulator.core" />
-          <property key="Export-Package" value="!org.wso2.carbon.eventsimulator.core.internal,!org.wso2.carbon.eventsimulator.core.internal.*,org.wso2.carbon.eventsimulator.core.*" />
+          <property key="Export-Package" value="org.wso2.carbon.eventsimulator.core.*" />
           <property key="DynamicImport-Package" value="*" />
-          <property key="Include-Resource" value="META-INF/services.xml=$MODULE_DIR$/src/main/resources/META-INF/services.xml" />
         </additionalProperties>
         <additionalJARContents />
       </configuration>
