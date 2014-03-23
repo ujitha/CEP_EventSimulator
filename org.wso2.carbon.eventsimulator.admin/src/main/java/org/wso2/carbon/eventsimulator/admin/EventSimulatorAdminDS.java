@@ -9,7 +9,7 @@ import org.osgi.service.component.ComponentContext;
 import org.wso2.carbon.eventsimulator.core.EventSimulator;
 
 /**
- * This class is used to get the EventFormatter service.
+ * This class is used to get the Event Simulator service.
  *
  * @scr.component name="eventSimulatorAdmin.component" immediate="true"
  * @scr.reference name="eventSimulatorService.component"
