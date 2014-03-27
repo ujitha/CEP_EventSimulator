@@ -55,6 +55,15 @@
                             </tbody>
                         </table>
                     </td>
+
+
+                </tr>
+                <tr>
+                    <td class="buttonRow">
+                        <input type="button" value="Send" onclick="sendEvent(document.getElementById('eventStreams'))">
+                        <input type="button" value="Export" onclick="">
+                    </td>
+
                 </tr>
 
             </tbody>

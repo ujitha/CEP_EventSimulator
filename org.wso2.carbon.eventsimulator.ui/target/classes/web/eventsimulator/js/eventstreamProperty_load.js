@@ -42,10 +42,20 @@ function showEventProperties()
                   var tableRow2=eventStreamTable.insertRow(eventStreamTable.rows.length);
                   var tableRow3=eventStreamTable.insertRow(eventStreamTable.rows.length);
 
-                  tableRow1.innerHTML='<tr><td>Event Stream name</td><td>'+eventName+'</td></tr>';
-                  tableRow2.innerHTML='<tr><td>Event Stream definition</td><td>'+eventDef+'</td></tr>';
+                  tableRow1.innerHTML='<tr><td>Event Stream name</td><td id="eventName">'+eventName+'</td></tr>';
+
+                 // if(eventDef!=undefined)
+                  {
+                    tableRow2.innerHTML='<tr><td>Event Stream definition</td><td id="eventDef">'+eventDef+'</td></tr>';
+                  }
+//                  else{
+//                      tableRow2.innerHTML='<tr><input type="hidden" value="null"> </tr>';
+//                  }
+
+
                   tableRow3.innerHTML='<tr><td ><h4>Stream Attributes</h4> </td></tr>';
 
+                 var index=0;
                   if(metaData[0]!=null)
                   {
                       var tableRow4=eventStreamTable.insertRow(eventStreamTable.rows.length);
@@ -59,8 +69,8 @@ function showEventProperties()
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
                           var stringNameTyp=metaData[i].localAttributeName+" ("+metaData[i].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" id="'+metaData[i].localAttributeName+'"> </td></tr>';
-
+                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+metaData[i].localAttributeName+'" id="'+index+'"> </td></tr>';
+                          index++;
                       }
                   }
 
@@ -77,8 +87,8 @@ function showEventProperties()
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
                           var stringNameTyp=correlationData[j].localAttributeName+" ("+correlationData[j].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" id="'+correlationData[j].localAttributeName+'"> </td></tr>';
-
+                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+correlationData[j].localAttributeName+'" id="'+index+'"> </td></tr>';
+                           index++;
                       }
                   }
 
@@ -88,20 +98,65 @@ function showEventProperties()
 
                       tableRow6.innerHTML='<tr><h5>Payload Attributes</h5></tr>';
                   }
-                  
+
                   for(var k=0;k<correlationData.length;k++)
                   {
                       if(payloadData[k]!=null)
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
                           var stringNameTyp=payloadData[k].localAttributeName+" ("+payloadData[k].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" id="'+payloadData[k].localAttributeName+'"> </td></tr>';
-
+                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+payloadData[k].localAttributeName+'" id="'+index+'"> </td></tr>';
+                            index++;
                       }
                   }
+
+                var hiddenRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                  hiddenRow.innerHTML='<tr><td><input type="hidden" id="formFields" value="'+index+'"> </td></tr>'
               }
         }
 
 
     });
+}
+
+function sendEvent(form)
+{
+    var eventStreamName=document.getElementById("eventName").textContent;
+    var eventDef=document.getElementById("eventDef").textContent;
+
+    var index=document.getElementById("formFields").value;
+
+//    var EventStream="{\""+eventStreamName+"\":[{";
+//
+//    var attributes="";
+//    for(var i=0;i<index;i++)
+//    {
+//        var fieldInput=document.getElementById(i);
+//        attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\",";
+//    }
+//
+//    EventStream=EventStream+attributes+"}]}"
+//
+//    alert((EventStream));
+
+
+    var EventStream="{\"EventStreamName\":\""+eventStreamName+"\"";
+
+    var attributes="";
+    for(var i=0;i<index;i++)
+    {
+        if(i!=index-1)
+        {
+            var fieldInput=document.getElementById(i);
+            attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\",";
+        }
+        else{
+            var fieldInput=document.getElementById(i);
+            attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\"";
+        }
+    }
+
+    EventStream=EventStream+attributes+"}"
+
+    alert((EventStream));
 }
