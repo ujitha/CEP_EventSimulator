@@ -23,6 +23,16 @@
               
                   if (
                   "http://admin.eventsimulator.carbon.wso2.org/xsd".equals(namespaceURI) &&
+                  "EventStreamAttributeValuesDto".equals(typeName)){
+                   
+                            return  org.wso2.carbon.eventsimulator.stub.types.EventStreamAttributeValuesDto.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://admin.eventsimulator.carbon.wso2.org/xsd".equals(namespaceURI) &&
                   "EventStreamInfoDto".equals(typeName)){
                    
                             return  org.wso2.carbon.eventsimulator.stub.types.EventStreamInfoDto.Factory.parse(reader);
@@ -36,6 +46,16 @@
                   "EventStreamAttributeDto".equals(typeName)){
                    
                             return  org.wso2.carbon.eventsimulator.stub.types.EventStreamAttributeDto.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://admin.eventsimulator.carbon.wso2.org/xsd".equals(namespaceURI) &&
+                  "EventDto".equals(typeName)){
+                   
+                            return  org.wso2.carbon.eventsimulator.stub.types.EventDto.Factory.parse(reader);
                         
 
                   }

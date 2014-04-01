@@ -4,8 +4,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.core.AbstractAdmin;
 import org.wso2.carbon.databridge.commons.StreamDefinition;
+import org.wso2.carbon.eventsimulator.core.EventDetailsValue;
 import org.wso2.carbon.eventsimulator.core.EventSimulator;
 import org.wso2.carbon.databridge.commons.Attribute;
+import org.wso2.carbon.eventsimulator.core.EventsDetail;
 
 
 //import org.wso2.carbon.eventsimulator.core.EventSimulator;
@@ -106,5 +108,40 @@ public class EventSimulatorAdminService extends AbstractAdmin {
         }
 
         return new EventStreamInfoDto[0];
+    }
+
+
+    public void getEventDetails(EventDto eventdetails)
+    {
+        EventDto eventDetails=new EventDto();
+        eventDetails=eventdetails;
+
+        System.out.println(eventDetails.getEventStreamName());
+        EventStreamAttributeValuesDto[] eventAttributeArray=eventDetails.getAttributes();
+
+//        for(int i=0;i<eventAttributeArray.length;i++)
+//        {
+//            System.out.println("Attribute name : "+eventAttributeArray[i].getAttributeName()+" ,Attribute value : "+eventAttributeArray[i].getValue());
+//        }
+
+        EventSimulator eventSimulator=EventSimulatorAdminvalueHolder.getEventSimulator();
+
+        EventDetailsValue[] eventDetailsvalueArray=new EventDetailsValue[eventAttributeArray.length];
+
+        for(int i=0;i<eventAttributeArray.length;i++)
+        {
+            eventDetailsvalueArray[i]=new EventDetailsValue();
+
+            eventDetailsvalueArray[i].setAttributeName(eventAttributeArray[i].getAttributeName());
+            eventDetailsvalueArray[i].setType(eventAttributeArray[i].getType());
+            eventDetailsvalueArray[i].setValue(eventAttributeArray[i].getValue());
+        }
+
+        EventsDetail eventDetailObject=new EventsDetail();
+
+        eventDetailObject.setEventStreamName(eventDetails.getEventStreamName());
+        eventDetailObject.setAttributes(eventDetailsvalueArray);
+        System.out.println("name"+eventDetailObject.getEventStreamName());
+        eventSimulator.sendEventDetails(eventDetailObject);
     }
 }

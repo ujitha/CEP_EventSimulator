@@ -28,6 +28,7 @@ function showEventProperties()
 
                   var jsonObject=JSON.parse(msg);
                   var eventName=jsonObject.localStreamName;
+                  var eventVersion=jsonObject.localStreamVersion;
                   var eventDef=jsonObject.localStreamDescription;
                   var metaData=new Array();
                   var correlationData=new Array();
@@ -42,7 +43,7 @@ function showEventProperties()
                   var tableRow2=eventStreamTable.insertRow(eventStreamTable.rows.length);
                   var tableRow3=eventStreamTable.insertRow(eventStreamTable.rows.length);
 
-                  tableRow1.innerHTML='<tr><td>Event Stream name</td><td id="eventName">'+eventName+'</td></tr>';
+                  tableRow1.innerHTML='<tr><td>Event Stream name</td><td id="eventName">'+eventName+":"+eventVersion+'</td></tr>';
 
                  // if(eventDef!=undefined)
                   {
@@ -69,7 +70,7 @@ function showEventProperties()
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
                           var stringNameTyp=metaData[i].localAttributeName+" ("+metaData[i].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+metaData[i].localAttributeName+'" id="'+index+'"> </td></tr>';
+                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+metaData[i].localAttributeName+'" id="'+index+'" attributeType="'+metaData[i].localAttributeType+'"> </td></tr>';
                           index++;
                       }
                   }
@@ -87,7 +88,7 @@ function showEventProperties()
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
                           var stringNameTyp=correlationData[j].localAttributeName+" ("+correlationData[j].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+correlationData[j].localAttributeName+'" id="'+index+'"> </td></tr>';
+                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+correlationData[j].localAttributeName+'" id="'+index+'" attributeType="'+correlationData[j].localAttributeType+'"> </td></tr>';
                            index++;
                       }
                   }
@@ -105,7 +106,7 @@ function showEventProperties()
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
                           var stringNameTyp=payloadData[k].localAttributeName+" ("+payloadData[k].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+payloadData[k].localAttributeName+'" id="'+index+'"> </td></tr>';
+                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+payloadData[k].localAttributeName+'" id="'+index+'" attributeType="'+payloadData[k].localAttributeType+'"> </td></tr>';
                             index++;
                       }
                   }
@@ -140,23 +141,51 @@ function sendEvent(form)
 //    alert((EventStream));
 
 
-    var EventStream="{\"EventStreamName\":\""+eventStreamName+"\",";
+   // var eventstream="{\"EventStreamName\":\""+eventStreamName+"\",";
 
-    var attributes="";
+    var jsonString="{\"EventStreamName\":\""+eventStreamName+"\",\"attributes\":[";
+    var jsonAttribute="";
+
+   // var attributes="";
     for(var i=0;i<index;i++)
     {
         if(i!=index-1)
         {
             var fieldInput=document.getElementById(i);
-            attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\",";
+
+           // attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\",";
+            jsonAttribute=jsonAttribute+"{\"name\":\""+fieldInput.name+"\",\"value\":\""+fieldInput.value+"\",\"type\":\""+fieldInput.getAttribute("attributeType")+"\"},";
         }
         else{
             var fieldInput=document.getElementById(i);
-            attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\"";
+            //attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\"";
+            jsonAttribute=jsonAttribute+"{\"name\":\""+fieldInput.name+"\",\"value\":\""+fieldInput.value+"\",\"type\":\""+fieldInput.getAttribute("attributeType")+"\"}";
         }
     }
 
-    EventStream=EventStream+attributes+"}"
+    //eventstream=eventstream+attributes+"}"
+    jsonString=jsonString+jsonAttribute+"]}"
 
-    alert((EventStream));
+   // alert((eventstream));
+
+    $.ajax({
+        type:"POST",
+        url:"../eventsimulator/sendEventstreams_ajaxprocessor.jsp?jsonData="+jsonString+"",
+        parameters:{jsonData:jsonString},
+        contentType:"application/json; charset=utf-8",
+        dataType:'json',
+        async:false,
+
+        success:function(msg){
+
+        }
+
+    });
+
+
+}
+
+function uploadCSV()
+{
+
 }

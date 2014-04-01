@@ -4,13 +4,12 @@
     <facet type="Osmorc" name="OSGi">
       <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="org.wso2.carbon.eventsimulator.ui-1.0.0.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="" bundleSymbolicName="org.wso2.carbon.eventsimulator.ui" bundleVersion="1.0.0" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
         <additionalProperties>
-          <property key="Bundle-Description" value="org.wso2.carbon.eventsimulator.UI provides the front-endfunctionalities" />
           <property key="Bundle-Name" value="org.wso2.carbon.eventsimulator.ui" />
           <property key="Carbon-Component" value="UIBundle" />
           <property key="Export-Package" value="org.wso2.carbon.eventsimulator.ui.*," />
           <property key="Import-Package" value="org.wso2.carbon.eventsimulator.stub.*,org.wso2.carbon.utils,org.apache.axis2.*,org.apache.axiom.*,*;resolution:=optional" />
           <property key="DynamicImport-Package" value="*" />
-          <property key="Include-Resource" value="org/wso2/carbon/eventsimulator/ui/i18n/Resources.properties=$MODULE_DIR$/src/main/resources/org/wso2/carbon/eventsimulator/ui/i18n/Resources.properties,web/eventsimulator/getProperties_ajaxprocessor.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/getProperties_ajaxprocessor.jsp,web/eventsimulator/js/eventstreamProperty_load.js=$MODULE_DIR$/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js,web/eventsimulator/index.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/index.jsp,META-INF/component.xml=$MODULE_DIR$/src/main/resources/META-INF/component.xml" />
+          <property key="Include-Resource" value="org/wso2/carbon/eventsimulator/ui/i18n/Resources.properties=$MODULE_DIR$/src/main/resources/org/wso2/carbon/eventsimulator/ui/i18n/Resources.properties,web/eventsimulator/getProperties_ajaxprocessor.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/getProperties_ajaxprocessor.jsp,web/eventsimulator/js/eventstreamProperty_load.js=$MODULE_DIR$/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js,web/eventsimulator/sendEventstreams_ajaxprocessor.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/sendEventstreams_ajaxprocessor.jsp,web/eventsimulator/index.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/index.jsp,META-INF/component.xml=$MODULE_DIR$/src/main/resources/META-INF/component.xml" />
         </additionalProperties>
         <additionalJARContents />
       </configuration>
@@ -126,6 +125,16 @@
     <orderEntry type="library" name="Maven: org.wso2.carbon:org.wso2.carbon.identity.authentication:4.2.0" level="project" />
     <orderEntry type="library" name="Maven: slf4j.wso2:slf4j:1.5.10.wso2v1" level="project" />
     <orderEntry type="library" name="Maven: org.wso2.carbon:org.wso2.carbon.event.stream.manager.core:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.siddhi:siddhi-core:2.1.0-wso2v1" level="project" />
+    <orderEntry type="library" name="Maven: com.h2database:h2:1.3.172" level="project" />
+    <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.siddhi:siddhi-api:2.1.0-wso2v1" level="project" />
+    <orderEntry type="library" name="Maven: org.wso2.siddhi:siddhi-query:2.1.0-wso2v1" level="project" />
+    <orderEntry type="library" name="Maven: org.mvel:mvel2:2.0.19" level="project" />
+    <orderEntry type="library" name="Maven: org.antlr:antlr-runtime:3.4" level="project" />
+    <orderEntry type="library" name="Maven: org.antlr:stringtemplate:3.2.1" level="project" />
+    <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
     <orderEntry type="library" name="Maven: org.wso2.carbon:org.wso2.carbon.event.processor.api:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.wso2.carbon:org.wso2.carbon.ui:4.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tiles.wso2:tiles-jsp:2.0.5.wso2v2" level="project" />

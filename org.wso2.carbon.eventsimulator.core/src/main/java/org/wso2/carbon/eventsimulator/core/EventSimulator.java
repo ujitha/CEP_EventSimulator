@@ -17,5 +17,9 @@ public interface EventSimulator {
 
     public Collection<StreamDefinition> getAllEventStreamDefinitions();
 
+    public void sendEventDetails(EventsDetail eventDetail);
+
+
+
 
 }

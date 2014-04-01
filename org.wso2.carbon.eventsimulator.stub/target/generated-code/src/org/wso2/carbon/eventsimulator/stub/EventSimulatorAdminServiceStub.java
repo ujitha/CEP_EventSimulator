@@ -44,7 +44,7 @@
         //creating the operations
         org.apache.axis2.description.AxisOperation __operation;
 
-        _operations = new org.apache.axis2.description.AxisOperation[1];
+        _operations = new org.apache.axis2.description.AxisOperation[2];
         
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
@@ -56,6 +56,18 @@
 	    
 	    
             _operations[0]=__operation;
+            
+        
+                   __operation = new org.apache.axis2.description.OutInAxisOperation();
+                
+
+            __operation.setName(new javax.xml.namespace.QName("http://admin.eventsimulator.carbon.wso2.org", "getEventDetails"));
+	    _service.addOperation(__operation);
+	    
+
+	    
+	    
+            _operations[1]=__operation;
             
         
         }
@@ -133,7 +145,7 @@
                      * Auto generated method signature
                      * 
                      * @see org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminService#getAllEventStreamInfoDto
-                     * @param getAllEventStreamInfoDto3
+                     * @param getAllEventStreamInfoDto7
                     
                      */
 
@@ -252,7 +264,7 @@
                 * Auto generated method signature for Asynchronous Invocations
                 * 
                 * @see org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminService#startgetAllEventStreamInfoDto
-                    * @param getAllEventStreamInfoDto3
+                    * @param getAllEventStreamInfoDto7
                 
                 */
                 public  void startgetAllEventStreamInfoDto(
@@ -392,6 +404,178 @@
 
                     }
                 
+                    /**
+                     * Auto generated method signature
+                     * 
+                     * @see org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminService#getEventDetails
+                     * @param getEventDetails10
+                    
+                     */
+
+                    
+
+                            public  void getEventDetails(
+
+                            org.wso2.carbon.eventsimulator.stub.types.EventDto eventdetails11)
+                        
+
+                    throws java.rmi.RemoteException
+                    
+                    {
+              org.apache.axis2.context.MessageContext _messageContext = null;
+              try{
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
+              _operationClient.getOptions().setAction("urn:getEventDetails");
+              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+              // create a message context
+              _messageContext = new org.apache.axis2.context.MessageContext();
+
+              
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env = null;
+                    org.wso2.carbon.eventsimulator.stub.GetEventDetails dummyWrappedType = null;
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    eventdetails11,
+                                                    dummyWrappedType,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://admin.eventsimulator.carbon.wso2.org",
+                                                    "getEventDetails")));
+                                                
+        //adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // set the message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message contxt to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+        //execute the operation client
+        _operationClient.execute(true);
+
+         
+                return;
+            
+         }catch(org.apache.axis2.AxisFault f){
+
+            org.apache.axiom.om.OMElement faultElt = f.getDetail();
+            if (faultElt!=null){
+                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"getEventDetails"))){
+                    //make the fault by reflection
+                    try{
+                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"getEventDetails"));
+                        java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        //message class
+                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"getEventDetails"));
+                        java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+                        java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+                        java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+                                   new java.lang.Class[]{messageClass});
+                        m.invoke(ex,new java.lang.Object[]{messageObject});
+                        
+
+                        throw new java.rmi.RemoteException(ex.getMessage(), ex);
+                    }catch(java.lang.ClassCastException e){
+                       // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.ClassNotFoundException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }catch (java.lang.NoSuchMethodException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.reflect.InvocationTargetException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }  catch (java.lang.IllegalAccessException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }   catch (java.lang.InstantiationException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }
+                }else{
+                    throw f;
+                }
+            }else{
+                throw f;
+            }
+            } finally {
+                if (_messageContext.getTransportOut() != null) {
+                      _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                }
+            }
+        }
+            
+                /**
+                * Auto generated method signature for Asynchronous Invocations
+                * 
+                * @see org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminService#startgetEventDetails
+                    * @param getEventDetails10
+                
+                */
+                public  void startgetEventDetails(
+
+                 org.wso2.carbon.eventsimulator.stub.types.EventDto eventdetails11,
+
+                  final org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
+
+                throws java.rmi.RemoteException{
+
+              org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
+             _operationClient.getOptions().setAction("urn:getEventDetails");
+             _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env=null;
+              final org.apache.axis2.context.MessageContext _messageContext = new org.apache.axis2.context.MessageContext();
+
+                    
+                                    //Style is Doc.
+                                    org.wso2.carbon.eventsimulator.stub.GetEventDetails dummyWrappedType = null;
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    eventdetails11,
+                                                     dummyWrappedType,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://admin.eventsimulator.carbon.wso2.org",
+                                                    "getEventDetails")));
+                                                
+        // adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // create message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message context to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+
+                    
+                            // Nothing to pass as the callback!!!
+                        
+
+          org.apache.axis2.util.CallbackReceiver _callbackReceiver = null;
+        if ( _operations[1].getMessageReceiver()==null &&  _operationClient.getOptions().isUseSeparateListener()) {
+           _callbackReceiver = new org.apache.axis2.util.CallbackReceiver();
+          _operations[1].setMessageReceiver(
+                    _callbackReceiver);
+        }
+
+           //execute the operation client
+           _operationClient.execute(false);
+
+                    }
+                
 
 
        /**
@@ -452,6 +636,20 @@
 
             }
         
+            private  org.apache.axiom.om.OMElement  toOM(org.wso2.carbon.eventsimulator.stub.GetEventDetails param, boolean optimizeContent)
+            throws org.apache.axis2.AxisFault {
+
+            
+                        try{
+                             return param.getOMElement(org.wso2.carbon.eventsimulator.stub.GetEventDetails.MY_QNAME,
+                                          org.apache.axiom.om.OMAbstractFactory.getOMFactory());
+                        } catch(org.apache.axis2.databinding.ADBException e){
+                            throw org.apache.axis2.AxisFault.makeFault(e);
+                        }
+                    
+
+            }
+        
                                     
                                 private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory,
                                     org.wso2.carbon.eventsimulator.stub.GetAllEventStreamInfoDto dummyWrappedType,
@@ -489,6 +687,37 @@
                                     
                                 }
                              
+                                    
+                                private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory,
+                                    org.wso2.carbon.eventsimulator.stub.types.EventDto param1,
+                                    org.wso2.carbon.eventsimulator.stub.GetEventDetails dummyWrappedType,
+                                 boolean optimizeContent) throws org.apache.axis2.AxisFault{
+
+                                try{
+                                org.wso2.carbon.eventsimulator.stub.GetEventDetails wrappedType = new org.wso2.carbon.eventsimulator.stub.GetEventDetails();
+
+                                 
+                                              wrappedType.setEventdetails(param1);
+                                         
+
+                               org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
+                                  
+                                        emptyEnvelope.getBody().addChild(wrappedType.getOMElement(org.wso2.carbon.eventsimulator.stub.GetEventDetails.MY_QNAME,factory));
+                                    
+
+                                return emptyEnvelope;
+                               } catch(org.apache.axis2.databinding.ADBException e){
+                                    throw org.apache.axis2.AxisFault.makeFault(e);
+                               }
+                               }
+
+
+
+                                
+                             
+                             /* methods to provide back word compatibility */
+
+                             
 
 
         /**
@@ -516,6 +745,13 @@
                 if (org.wso2.carbon.eventsimulator.stub.GetAllEventStreamInfoDtoResponse.class.equals(type)){
                 
                            return org.wso2.carbon.eventsimulator.stub.GetAllEventStreamInfoDtoResponse.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                    
+
+                }
+           
+                if (org.wso2.carbon.eventsimulator.stub.GetEventDetails.class.equals(type)){
+                
+                           return org.wso2.carbon.eventsimulator.stub.GetEventDetails.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }

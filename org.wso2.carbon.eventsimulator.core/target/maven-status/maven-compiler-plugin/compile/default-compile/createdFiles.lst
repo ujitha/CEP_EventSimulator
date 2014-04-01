@@ -1,4 +1,8 @@
+org/wso2/carbon/eventsimulator/core/EventsDetail.class
 org/wso2/carbon/eventsimulator/core/EventSimulator.class
-org/wso2/carbon/eventsimulator/core/EventSimulatorDS.class
+org/wso2/carbon/eventsimulator/core/EventStreamProducer.class
+org/wso2/carbon/eventsimulator/core/EventDetailsValue.class
 org/wso2/carbon/eventsimulator/core/CarbonEventSimulator.class
+org/wso2/carbon/eventsimulator/core/EventSimulatorDS.class
+org/wso2/carbon/eventsimulator/core/EventConsumer.class
 org/wso2/carbon/eventsimulator/core/EventSimulatorValueHolder.class

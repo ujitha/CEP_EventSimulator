@@ -4,11 +4,16 @@
             <transport>https</transport>
         </transports>
         <parameter name="ServiceClass">org.wso2.carbon.eventsimulator.admin.EventSimulatorAdminService</parameter>
+
         <parameter name="AuthorizationAction" locked="false">
             /permission/admin/manage/eventSimulator
         </parameter>
-
         <operation name="getAllEventStreamInfoDto">
+            <parameter name="AuthorizationAction" locked="false">
+                /permission/admin/manage/eventSimulator
+            </parameter>
+        </operation>
+        <operation name="getEventDetails">
             <parameter name="AuthorizationAction" locked="false">
                 /permission/admin/manage/eventSimulator
             </parameter>
@@ -17,5 +22,4 @@
 
     <parameter name="adminService" locked="true">false</parameter>
     <parameter name="hiddenService" locked="true">false</parameter>
-    <parameter name="AuthorizationAction" locked="true">/permission/admin/manage/eventSimulator</parameter>
 </serviceGroup>

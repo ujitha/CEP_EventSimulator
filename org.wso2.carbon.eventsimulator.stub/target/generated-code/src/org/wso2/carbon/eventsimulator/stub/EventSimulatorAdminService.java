@@ -19,7 +19,7 @@
         /**
           * Auto generated method signature
           * 
-                    * @param getAllEventStreamInfoDto0
+                    * @param getAllEventStreamInfoDto1
                 
          */
 
@@ -34,12 +34,43 @@
          /**
             * Auto generated method signature for Asynchronous Invocations
             * 
-                * @param getAllEventStreamInfoDto0
+                * @param getAllEventStreamInfoDto1
             
           */
         public void startgetAllEventStreamInfoDto(
 
             
+
+            final org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
+
+            throws java.rmi.RemoteException;
+
+     
+
+        /**
+          * Auto generated method signature
+          * 
+                    * @param getEventDetails4
+                
+         */
+
+         
+                     public void getEventDetails(
+
+                        org.wso2.carbon.eventsimulator.stub.types.EventDto eventdetails5)
+                        throws java.rmi.RemoteException
+             ;
+
+        
+         /**
+            * Auto generated method signature for Asynchronous Invocations
+            * 
+                * @param getEventDetails4
+            
+          */
+        public void startgetEventDetails(
+
+            org.wso2.carbon.eventsimulator.stub.types.EventDto eventdetails5,
 
             final org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
 

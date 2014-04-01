@@ -40,13 +40,23 @@
                                         <select name="EventStreamID" id="EventStreamID" onchange="showEventProperties()">
 
                                             <%
-                                                for(int i=0;i<eventInfoArray.length;i++)
+                                                if(eventInfoArray==null)
                                                 {
+                                                    %>
+
+                                                    <option value="No Event Stream Definitions" >No Event Stream Definitions</option>
+                                            <%
+                                            }
+                                            else{
+
+                                                    for(int i=0;i<eventInfoArray.length;i++)
+                                                    {
                                             %>
-                                                <option value="<%=eventInfoArray[i].getStreamName()%>" ><%=eventInfoArray[i].getStreamName()%></option>
+                                                    <option value="<%=eventInfoArray[i].getStreamName()%>" ><%=eventInfoArray[i].getStreamName()%>:<%=eventInfoArray[i].getStreamVersion()%></option>
 
 
                                             <%
+                                                    }
                                                 }
                                             %>
                                         </select>
@@ -61,7 +71,7 @@
                 <tr>
                     <td class="buttonRow">
                         <input type="button" value="Send" onclick="sendEvent(document.getElementById('eventStreams'))">
-                        <input type="button" value="Export" onclick="">
+                        <input type="button" value="Export" onclick="uploadCSV()">
                     </td>
 
                 </tr>
@@ -69,34 +79,6 @@
             </tbody>
         </table>
     </form>
-
-
-    <%--<form name="eventStreamDetails">--%>
-        <%--<table id="eventStreamDetails">--%>
-            <%--<thead>--%>
-            <%--<tr><th>Event Stream Details</th></tr>--%>
-            <%--</thead>--%>
-
-            <%--<tbody>--%>
-                <%--<tr>--%>
-                        <%--<td> Stream Name</td>--%>
-                        <%--<script type="text/javascript">--%>
-
-
-                        <%--</script>--%>
-                <%--</tr>--%>
-
-                <%--<tr>--%>
-                        <%--<td>Stream description</td>--%>
-                        <%--<td></td>--%>
-                <%--</tr>--%>
-
-            <%--</tbody>--%>
-
-
-        <%--</table>--%>
-
-    <%--</form>--%>
 
 </div>
 

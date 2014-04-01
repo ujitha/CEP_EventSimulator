@@ -60,6 +60,21 @@
             public void receiveErrorgetAllEventStreamInfoDto(java.lang.Exception e) {
             }
                 
+           /**
+            * auto generated Axis2 call back method for getEventDetails method
+            * override this method for handling normal response from getEventDetails operation
+            */
+           public void receiveResultgetEventDetails(
+                    ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from getEventDetails operation
+           */
+            public void receiveErrorgetEventDetails(java.lang.Exception e) {
+            }
+                
 
 
     }
