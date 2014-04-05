@@ -43,25 +43,24 @@ function showEventProperties()
                   var tableRow2=eventStreamTable.insertRow(eventStreamTable.rows.length);
                   var tableRow3=eventStreamTable.insertRow(eventStreamTable.rows.length);
 
-                  tableRow1.innerHTML='<tr><td>Event Stream name</td><td id="eventName">'+eventName+":"+eventVersion+'</td></tr>';
+                  var streamID=eventName+":"+eventVersion;
 
-                 // if(eventDef!=undefined)
-                  {
-                    tableRow2.innerHTML='<tr><td>Event Stream definition</td><td id="eventDef">'+eventDef+'</td></tr>';
-                  }
-//                  else{
-//                      tableRow2.innerHTML='<tr><input type="hidden" value="null"> </tr>';
+                  tableRow1.innerHTML='<tr><td><input type="hidden" id="eventName" value="'+streamID+'"> </td></tr>'
+
+//                  if(eventDef!="")
+//                  {
+//                    tableRow2.innerHTML='<tr><td>Event Stream definition</td><td id="eventDef">'+eventDef+'</td></tr>';
 //                  }
 
 
-                  tableRow3.innerHTML='<tr><td ><h4>Stream Attributes</h4> </td></tr>';
+                  tableRow3.innerHTML='<tr><td><b>Stream Attributes<b> </td></tr>';
 
                  var index=0;
                   if(metaData[0]!=null)
                   {
                       var tableRow4=eventStreamTable.insertRow(eventStreamTable.rows.length);
 
-                      tableRow4.innerHTML='<tr><h5>Meta Attributes</h5></tr>';
+                      tableRow4.innerHTML='<tr><td><h6>Meta Attributes</h6></td></tr>';
                   }
 
                   for(var i=0;i<metaData.length;i++)
@@ -69,8 +68,11 @@ function showEventProperties()
                       if(metaData[i]!=null)
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
-                          var stringNameTyp=metaData[i].localAttributeName+" ("+metaData[i].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+metaData[i].localAttributeName+'" id="'+index+'" attributeType="'+metaData[i].localAttributeType+'"> </td></tr>';
+                          var attributeType=metaData[i].localAttributeType;
+                          var attributeName=metaData[i].localAttributeName;
+
+                          var stringNameTyp=attributeName+" ("+attributeType.toLowerCase()+")";
+                          tableRow.innerHTML='<tr><td>'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span> </td><td><input type="text" name="'+metaData[i].localAttributeName+'" id="'+index+'" attributeType="'+metaData[i].localAttributeType+'"> </td></tr>';
                           index++;
                       }
                   }
@@ -79,7 +81,7 @@ function showEventProperties()
                    {
                       var tableRow5=eventStreamTable.insertRow(eventStreamTable.rows.length);
 
-                      tableRow5.innerHTML='<tr><h5>Correlation Attributes</h5></tr>';
+                      tableRow5.innerHTML='<tr><td><h6>Correlation Attributes</h6></td></tr>';
                    }
 
                   for(var j=0;j<correlationData.length;j++)
@@ -87,9 +89,12 @@ function showEventProperties()
                       if(correlationData[j]!=null)
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
-                          var stringNameTyp=correlationData[j].localAttributeName+" ("+correlationData[j].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+correlationData[j].localAttributeName+'" id="'+index+'" attributeType="'+correlationData[j].localAttributeType+'"> </td></tr>';
+                          var attributeType=correlationData[j].localAttributeType;
+                          var attributeName=correlationData[j].localAttributeName;
+                          var stringNameTyp=attributeName+" ("+attributeType.toLowerCase()+")";
+                          tableRow.innerHTML='<tr><td>'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span> </td><td><input type="text" name="'+correlationData[j].localAttributeName+'" id="'+index+'" attributeType="'+correlationData[j].localAttributeType+'"> </td></tr>';
                            index++;
+
                       }
                   }
 
@@ -97,16 +102,18 @@ function showEventProperties()
                   {
                       var tableRow6=eventStreamTable.insertRow(eventStreamTable.rows.length);
 
-                      tableRow6.innerHTML='<tr><h5>Payload Attributes</h5></tr>';
+                      tableRow6.innerHTML='<tr><td><h6>Payload Attributes</h6></td></tr>';
                   }
 
-                  for(var k=0;k<correlationData.length;k++)
+                  for(var k=0;k<payloadData.length;k++)
                   {
                       if(payloadData[k]!=null)
                       {
                           var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
-                          var stringNameTyp=payloadData[k].localAttributeName+" ("+payloadData[k].localAttributeType+")";
-                          tableRow.innerHTML='<tr><td>'+stringNameTyp+'</td><td><input type="text" name="'+payloadData[k].localAttributeName+'" id="'+index+'" attributeType="'+payloadData[k].localAttributeType+'"> </td></tr>';
+                          var attributeType=payloadData[k].localAttributeType;
+                          var attributeName=payloadData[k].localAttributeName;
+                          var stringNameTyp=attributeName+" ("+attributeType.toLowerCase()+")";
+                          tableRow.innerHTML='<tr><td>'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span>  </td><td><input type="text" name="'+payloadData[k].localAttributeName+'" id="'+index+'" attributeType="'+payloadData[k].localAttributeType+'"> </td></tr>';
                             index++;
                       }
                   }
@@ -122,38 +129,20 @@ function showEventProperties()
 
 function sendEvent(form)
 {
-    var eventStreamName=document.getElementById("eventName").textContent;
-    var eventDef=document.getElementById("eventDef").textContent;
-
+   //if(validate()==true)
+   {
+    var eventStreamName=document.getElementById("eventName").value;
     var index=document.getElementById("formFields").value;
-
-//    var EventStream="{\""+eventStreamName+"\":[{";
-//
-//    var attributes="";
-//    for(var i=0;i<index;i++)
-//    {
-//        var fieldInput=document.getElementById(i);
-//        attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\",";
-//    }
-//
-//    EventStream=EventStream+attributes+"}]}"
-//
-//    alert((EventStream));
-
-
-   // var eventstream="{\"EventStreamName\":\""+eventStreamName+"\",";
 
     var jsonString="{\"EventStreamName\":\""+eventStreamName+"\",\"attributes\":[";
     var jsonAttribute="";
 
-   // var attributes="";
-    for(var i=0;i<index;i++)
+   for(var i=0;i<index;i++)
     {
         if(i!=index-1)
         {
             var fieldInput=document.getElementById(i);
 
-           // attributes=attributes+"\""+fieldInput.name+"\":"+"\""+fieldInput.value+"\",";
             jsonAttribute=jsonAttribute+"{\"name\":\""+fieldInput.name+"\",\"value\":\""+fieldInput.value+"\",\"type\":\""+fieldInput.getAttribute("attributeType")+"\"},";
         }
         else{
@@ -163,29 +152,77 @@ function sendEvent(form)
         }
     }
 
-    //eventstream=eventstream+attributes+"}"
     jsonString=jsonString+jsonAttribute+"]}"
 
-   // alert((eventstream));
-
-    $.ajax({
+    jQuery.ajax({
         type:"POST",
         url:"../eventsimulator/sendEventstreams_ajaxprocessor.jsp?jsonData="+jsonString+"",
-        parameters:{jsonData:jsonString},
-        contentType:"application/json; charset=utf-8",
-        dataType:'json',
         async:false,
 
         success:function(msg){
 
+
+            if(msg != null && msg.trim() =="Success")
+            {
+                CARBON.showInfoDialog("Event is successfuly sent");
+
+               for(var j=0;j<index;j++)
+               {
+                   var inputField=document.getElementById(j);
+
+                   inputField.value="";
+
+               }
+            }
+            else{
+                CARBON.showErrorDialog("ERROR - "+msg);
+            }
         }
+
+
 
     });
 
-
+   }
 }
 
 function uploadCSV()
 {
 
+}
+
+function validate()
+{
+    var index=document.getElementById("formFields").value;
+
+    for(var i=0;i<index;i++){
+
+        var val=document.getElementById(i).value;
+        var typ=document.getElementById(i).getAttribute("attributeType")
+
+        if(val==undefined ||val==""){
+
+            CARBON.showErrorDialog("Please fill all the fields");
+            return;
+        }
+        else if(typ=="INT"||typ=="LONG"||typ=="FLOAT"||typ=="DOUBLE" ){
+
+            if(isNaN(val))
+            {
+                CARBON.showErrorDialog("Field value is not suit for the given type");
+                return;
+            }
+        }
+        else if(typ=="BOOLEAN"){
+
+            if(typ!="true" ||typ!="false")
+            {
+                CARBON.showErrorDialog("Boolean value should be true or false");
+                return;
+            }
+        }
+
+
+    }
+return true;
 }

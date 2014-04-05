@@ -17,6 +17,7 @@
 
 %>
 
+
 <div id="middle">
     <div id="workArea">
     <h2>Event Stream Simulator</h2>
@@ -35,9 +36,9 @@
                         <table id="inputEventDetailTable" class="normal-nopadding" style="width:100%">
                             <tbody>
                             <tr>
-                                <td class="left-Col-med">Select the Event Stream</td>
+                                <td class="left-Col-med">Select the Event Stream<span class="required">*</span></td>
                                 <td>
-                                        <select name="EventStreamID" id="EventStreamID" onchange="showEventProperties()">
+                                        <select name="EventStreamID" id="EventStreamID" onload="showEventProperties()" onchange="showEventProperties()">
 
                                             <%
                                                 if(eventInfoArray==null)
@@ -71,13 +72,15 @@
                 <tr>
                     <td class="buttonRow">
                         <input type="button" value="Send" onclick="sendEvent(document.getElementById('eventStreams'))">
-                        <input type="button" value="Export" onclick="uploadCSV()">
+                        <%--<input type="button" value="Upload a file" onclick="uploadCSV()">--%>
                     </td>
 
                 </tr>
 
             </tbody>
         </table>
+
+        <body onload="showEventProperties()"></body>
     </form>
 
 </div>

@@ -1,5 +1,6 @@
 package org.wso2.carbon.eventsimulator.admin;
 
+import org.apache.axis2.AxisFault;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.core.AbstractAdmin;
@@ -111,12 +112,12 @@ public class EventSimulatorAdminService extends AbstractAdmin {
     }
 
 
-    public void getEventDetails(EventDto eventdetails)
-    {
+    public void getEventDetails(EventDto eventdetails)throws AxisFault{
+
         EventDto eventDetails=new EventDto();
         eventDetails=eventdetails;
 
-        System.out.println(eventDetails.getEventStreamName());
+        //System.out.println(eventDetails.getEventStreamName());
         EventStreamAttributeValuesDto[] eventAttributeArray=eventDetails.getAttributes();
 
 //        for(int i=0;i<eventAttributeArray.length;i++)
@@ -135,13 +136,50 @@ public class EventSimulatorAdminService extends AbstractAdmin {
             eventDetailsvalueArray[i].setAttributeName(eventAttributeArray[i].getAttributeName());
             eventDetailsvalueArray[i].setType(eventAttributeArray[i].getType());
             eventDetailsvalueArray[i].setValue(eventAttributeArray[i].getValue());
+
+            if(eventAttributeArray[i].getValue().equals(""))
+            {
+                throw new AxisFault("Fill all the attribute fields");
+            }
+           else if(eventAttributeArray[i].getType().equals("INT")||eventAttributeArray[i].getType().equals("LONG"))
+            {
+                try{
+                    int val1=Integer.parseInt(eventAttributeArray[i].getValue());
+                    long val2=Long.parseLong(eventAttributeArray[i].getValue());
+                }
+                catch(NumberFormatException e)
+                {
+                    throw new AxisFault("Inappropriate value types  " + e.getMessage(), e);
+                }
+            }
+            else if(eventAttributeArray[i].getType().equals("DOUBLE")||eventAttributeArray[i].getType().equals("FLOAT"))
+            {
+                try{
+                    double val1=Double.parseDouble(eventAttributeArray[i].getValue());
+                    float val2=Float.parseFloat(eventAttributeArray[i].getValue());
+                }
+                catch (NumberFormatException e)
+                {
+                    throw new AxisFault("Inappropriate value types  " + e.getMessage(), e);
+                }
+            }
+            else if(eventAttributeArray[i].getType().equals("BOOLEAN"))
+            {
+                if(!Boolean.parseBoolean(eventAttributeArray[i].getValue()))
+                {
+                    throw new AxisFault("Inappropriate value type , boolean wanted in attribute : "+eventAttributeArray[i].getAttributeName());
+                }
+            }
+
         }
 
         EventsDetail eventDetailObject=new EventsDetail();
 
         eventDetailObject.setEventStreamName(eventDetails.getEventStreamName());
         eventDetailObject.setAttributes(eventDetailsvalueArray);
-        System.out.println("name"+eventDetailObject.getEventStreamName());
+        //System.out.println("name"+eventDetailObject.getEventStreamName());
         eventSimulator.sendEventDetails(eventDetailObject);
+
+
     }
 }
