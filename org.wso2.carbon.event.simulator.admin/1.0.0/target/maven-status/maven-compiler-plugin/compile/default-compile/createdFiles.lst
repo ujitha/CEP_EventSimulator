@@ -1,0 +1,8 @@
+org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminvalueHolder.class
+org/wso2/carbon/eventsimulator/admin/EventDto.class
+org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminDS.class
+org/wso2/carbon/eventsimulator/admin/StreamDefinitionDto.class
+org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminService.class
+org/wso2/carbon/eventsimulator/admin/EventStreamAttributeDto.class
+org/wso2/carbon/eventsimulator/admin/EventStreamAttributeValuesDto.class
+org/wso2/carbon/eventsimulator/admin/EventStreamInfoDto.class

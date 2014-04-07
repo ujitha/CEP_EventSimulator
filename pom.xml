@@ -12,10 +12,10 @@
     <url>http://maven.apache.org</url>
 
     <modules>
-        <module>org.wso2.carbon.eventsimulator.core</module>
-        <module>org.wso2.carbon.eventsimulator.admin</module>
-        <module>org.wso2.carbon.eventsimulator.ui</module>
-        <module>org.wso2.carbon.eventsimulator.stub</module>
+        <module>org.wso2.carbon.event.simulator.core/1.0.0</module>
+        <module>org.wso2.carbon.event.simulator.admin/1.0.0</module>
+        <module>org.wso2.carbon.event.simulator.ui/1.0.0</module>
+
     </modules>
 
     <!--<repositories>-->
