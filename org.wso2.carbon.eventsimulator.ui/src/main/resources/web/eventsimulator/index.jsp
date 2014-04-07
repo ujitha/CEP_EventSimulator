@@ -7,6 +7,9 @@
 <%@ page import="org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminServiceStub" %>
 <%@ page import="org.wso2.carbon.eventsimulator.admin.EventStreamInfoDto" %>
 
+<%@ taglib uri="http://wso2.org/projects/carbon/taglibs/carbontags.jar" prefix="carbon" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <script type="text/javascript"
         src="../eventsimulator/js/eventstreamProperty_load.js"></script>
 
@@ -16,6 +19,13 @@
    org.wso2.carbon.eventsimulator.stub.types.EventStreamInfoDto[] eventInfoArray=stub.getAllEventStreamInfoDto();
 
 %>
+
+<fmt:bundle basename="org.wso2.carbon.eventsimulator.ui.i18n.Resources">
+<carbon:breadcrumb
+        label="eventformatter.list"
+        resourceBundle="org.wso2.carbon.eventsimulator.ui.i18n.Resources"
+        topPage="false"
+        request="<%=request%>"/>
 
 
 <div id="middle">
@@ -86,3 +96,4 @@
 </div>
 
 </div>
+</fmt:bundle>
