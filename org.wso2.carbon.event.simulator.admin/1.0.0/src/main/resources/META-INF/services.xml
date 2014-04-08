@@ -3,7 +3,7 @@
         <transports>
             <transport>https</transport>
         </transports>
-        <parameter name="ServiceClass">org.wso2.carbon.eventsimulator.admin.EventSimulatorAdminService</parameter>
+        <parameter name="ServiceClass">org.wso2.carbon.event.simulator.admin.EventSimulatorAdminService</parameter>
 
         <parameter name="AuthorizationAction" locked="false">
             /permission/admin/manage/eventSimulator

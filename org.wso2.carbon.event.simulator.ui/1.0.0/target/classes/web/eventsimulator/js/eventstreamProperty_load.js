@@ -45,54 +45,61 @@ function showEventProperties()
 
                   var streamID=eventName+":"+eventVersion;
 
-                  tableRow1.innerHTML='<tr><td><input type="hidden" id="eventName" value="'+streamID+'"> </td></tr>'
-
-//                  if(eventDef!="")
-//                  {
-//                    tableRow2.innerHTML='<tr><td>Event Stream definition</td><td id="eventDef">'+eventDef+'</td></tr>';
-//                  }
+                 // tableRow1.innerHTML='<tr><td><input type="hidden" id="eventName" value="'+streamID+'"> </td></tr>'
 
 
-                  tableRow3.innerHTML='<tr><td><b>Stream Attributes<b> </td></tr>';
+
+                  tableRow1.innerHTML='<tr><td colspan="2"><div id="innerDiv4"><table class="styledLeft noBorders spacer-bot" id="streamAttributeTable" style="width:100%"><tbody><tr name="streamAttributes"><td colspan="2" class="middle-header">Stream Attributes</td></tr></tbody></table></div></td></tr>';
+
+
+                    var streamAttributeTable=document.getElementById("streamAttributeTable");
+
+                 // tableRow3.innerHTML='<tr><td><b>Stream Attributes<b> </td></tr>';
 
                  var index=0;
                   if(metaData[0]!=null)
                   {
-                      var tableRow4=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                      //var tableRow4=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                      var tableRow4=streamAttributeTable.insertRow(streamAttributeTable.rows.length);
 
-                      tableRow4.innerHTML='<tr><td><h6>Meta Attributes</h6></td></tr>';
+                      tableRow4.innerHTML='<tr><td colspan="2"><h6>Meta Attributes</h6></td></tr>';
                   }
 
                   for(var i=0;i<metaData.length;i++)
                   {
                       if(metaData[i]!=null)
                       {
-                          var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                         // var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                          var tableRow=streamAttributeTable.insertRow(streamAttributeTable.rows.length);
+
                           var attributeType=metaData[i].localAttributeType;
                           var attributeName=metaData[i].localAttributeName;
 
                           var stringNameTyp=attributeName+" ("+attributeType.toLowerCase()+")";
-                          tableRow.innerHTML='<tr><td>'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span> </td><td><input type="text" name="'+metaData[i].localAttributeName+'" id="'+index+'" attributeType="'+metaData[i].localAttributeType+'"> </td></tr>';
+                          tableRow.innerHTML='<tr><td class="leftCol-med">'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span> </td><td><input type="text" name="'+metaData[i].localAttributeName+'" id="'+index+'" attributeType="'+metaData[i].localAttributeType+'" class="initE" style="width:75%"> </td></tr>';
                           index++;
                       }
                   }
 
                    if(correlationData[0]!=null)
                    {
-                      var tableRow5=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                      //var tableRow5=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                       var tableRow5=streamAttributeTable.insertRow(streamAttributeTable.rows.length);
 
-                      tableRow5.innerHTML='<tr><td><h6>Correlation Attributes</h6></td></tr>';
+                      tableRow5.innerHTML='<tr><td colspan="2"><h6>Correlation Attributes</h6></td></tr>';
                    }
 
                   for(var j=0;j<correlationData.length;j++)
                   {
                       if(correlationData[j]!=null)
                       {
-                          var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                          //var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                          var tableRow=streamAttributeTable.insertRow(streamAttributeTable.rows.length);
+
                           var attributeType=correlationData[j].localAttributeType;
                           var attributeName=correlationData[j].localAttributeName;
                           var stringNameTyp=attributeName+" ("+attributeType.toLowerCase()+")";
-                          tableRow.innerHTML='<tr><td>'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span> </td><td><input type="text" name="'+correlationData[j].localAttributeName+'" id="'+index+'" attributeType="'+correlationData[j].localAttributeType+'"> </td></tr>';
+                          tableRow.innerHTML='<tr><td class="leftCol-med">'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span> </td><td><input type="text" name="'+correlationData[j].localAttributeName+'" id="'+index+'" attributeType="'+correlationData[j].localAttributeType+'" class="initE" style="width:75%"> </td></tr>';
                            index++;
 
                       }
@@ -100,26 +107,35 @@ function showEventProperties()
 
                   if(payloadData[0]!=null)
                   {
-                      var tableRow6=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                      //var tableRow6=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                      var tableRow6=streamAttributeTable.insertRow(streamAttributeTable.rows.length);
 
-                      tableRow6.innerHTML='<tr><td><h6>Payload Attributes</h6></td></tr>';
+                      tableRow6.innerHTML='<tr><td colspan="2"><h6>Payload Attributes</h6></td></tr>';
                   }
 
                   for(var k=0;k<payloadData.length;k++)
                   {
                       if(payloadData[k]!=null)
                       {
-                          var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                          //var tableRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                          var tableRow=streamAttributeTable.insertRow(streamAttributeTable.rows.length);
+
                           var attributeType=payloadData[k].localAttributeType;
                           var attributeName=payloadData[k].localAttributeName;
                           var stringNameTyp=attributeName+" ("+attributeType.toLowerCase()+")";
-                          tableRow.innerHTML='<tr><td>'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span>  </td><td><input type="text" name="'+payloadData[k].localAttributeName+'" id="'+index+'" attributeType="'+payloadData[k].localAttributeType+'"> </td></tr>';
+                          tableRow.innerHTML='<tr><td class="leftCol-med">'+attributeName+'(<span style="color: grey"><i>'+attributeType.toLowerCase()+'</i></span>) <span class="required">*</span>  </td><td><input type="text" name="'+payloadData[k].localAttributeName+'" id="'+index+'" attributeType="'+payloadData[k].localAttributeType+'" class="initE" style="width:75%"> </td></tr>';
                             index++;
                       }
                   }
 
-                var hiddenRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
-                  hiddenRow.innerHTML='<tr><td><input type="hidden" id="formFields" value="'+index+'"> </td></tr>'
+                  //var hiddenRow=eventStreamTable.insertRow(eventStreamTable.rows.length);
+                  var hiddenRow=streamAttributeTable.insertRow(streamAttributeTable.rows.length);
+                  hiddenRow.innerHTML='<tr><td colspan="2"><input type="hidden" id="formFields" value="'+index+'"> </td></tr>';
+
+
+
+
+
               }
         }
 
@@ -131,7 +147,10 @@ function sendEvent(form)
 {
    //if(validate()==true)
    {
-    var eventStreamName=document.getElementById("eventName").value;
+    var selectIndex=document.getElementById("EventStreamID").selectedIndex;
+    var eventStreamName=document.getElementById("EventStreamID").options[selectIndex].text;
+
+    //var eventStreamName=document.getElementById("eventName").value;
     var index=document.getElementById("formFields").value;
 
     var jsonString="{\"EventStreamName\":\""+eventStreamName+"\",\"attributes\":[";

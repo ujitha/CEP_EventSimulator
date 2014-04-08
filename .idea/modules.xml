@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/event-simulator.iml" filepath="$PROJECT_DIR$/event-simulator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.eventsimulator.admin/org.wso2.carbon.eventsimulator.admin.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.admin/org.wso2.carbon.eventsimulator.admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.eventsimulator.core/org.wso2.carbon.eventsimulator.core.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.core/org.wso2.carbon.eventsimulator.core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.eventsimulator.ui/org.wso2.carbon.eventsimulator.ui.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.ui/org.wso2.carbon.eventsimulator.ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/org.wso2.carbon.event.simulator.admin.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/org.wso2.carbon.event.simulator.admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/org.wso2.carbon.event.simulator.core.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/org.wso2.carbon.event.simulator.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/org.wso2.carbon.event.simulator.ui.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/org.wso2.carbon.event.simulator.ui.iml" />
     </modules>
   </component>
 </project>

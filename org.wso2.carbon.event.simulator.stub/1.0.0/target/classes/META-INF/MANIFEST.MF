@@ -1,4 +1,15 @@
 Manifest-Version: 1.0
+Export-Package: org.wso2.carbon.event.simulator.stub.types;uses:="java
+ x.xml.stream,org.apache.axis2.databinding.utils,org.apache.axis2.data
+ binding,javax.xml.namespace,org.apache.axis2.databinding.utils.reader
+ ,org.apache.axiom.om";version="4.2.0",org.wso2.carbon.event.simulator
+ .stub;uses:="org.wso2.carbon.event.simulator.stub.types,org.apache.ax
+ is2,org.apache.axis2.transport,org.apache.axis2.client,org.apache.axi
+ s2.context,javax.xml.namespace,org.apache.axiom.om,org.apache.axis2.d
+ escription,org.apache.axiom.soap,org.apache.axis2.util,org.apache.axi
+ s2.client.async,org.apache.axis2.addressing,javax.xml.stream,org.apac
+ he.axis2.engine,org.apache.axis2.databinding,org.apache.axis2.databin
+ ding.utils,org.apache.axis2.databinding.utils.reader";version="4.2.0"
 Ignore-Package: javax.xml.namespace
 Built-By: ujitha
 Tool: Bnd-1.43.0
@@ -7,7 +18,7 @@ Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
 Build-Jdk: 1.6.0_45
 Bundle-Version: 1.0.0
-Bnd-LastModified: 1396858859972
+Bnd-LastModified: 1396934674979
 Bundle-ManifestVersion: 2
 Bundle-Description: Platform Parent pom hold the properties, plugins w
  hich are required to build carbon components, carbon features and pro

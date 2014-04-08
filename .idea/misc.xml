@@ -7,11 +7,11 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="Osmorc" url="file://$PROJECT_DIR$/org.wso2.carbon.eventsimulator.admin" />
-    <file type="Osmorc" url="file://$PROJECT_DIR$/org.wso2.carbon.eventsimulator.core" />
-    <file type="Osmorc" url="file://$PROJECT_DIR$/org.wso2.carbon.eventsimulator.ui" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0" />
   </component>
-  <component name="IdProvider" IDEtalkID="164E96B87C2AA4E04BF8DF21B4F575D0" />
+  <component name="IdProvider" IDEtalkID="202588706E4A70828BDCEDC7A7C35DE3" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

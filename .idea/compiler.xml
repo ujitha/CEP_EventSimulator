@@ -22,11 +22,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="org.wso2.carbon.eventsimulator.admin" />
-        <module name="org.wso2.carbon.eventsimulator.core" />
-        <module name="org.wso2.carbon.eventsimulator.ui" />
+        <module name="org.wso2.carbon.event.simulator.admin" />
+        <module name="org.wso2.carbon.event.simulator.core" />
+        <module name="org.wso2.carbon.event.simulator.ui" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="event-simulator" target="1.6" />
+      <module name="org.wso2.carbon.event.simulator.admin" target="1.6" />
+      <module name="org.wso2.carbon.event.simulator.core" target="1.6" />
+      <module name="org.wso2.carbon.event.simulator.ui" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

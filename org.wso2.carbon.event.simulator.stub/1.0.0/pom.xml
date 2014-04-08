@@ -41,7 +41,7 @@
                                             location="${settings.localRepository}/org/apache/axis2/wso2/axis2/${orbit.version.axis2}/axis2-${orbit.version.axis2}.jar"/>
                                 </path>
                                 <java classname="org.apache.axis2.wsdl.WSDL2Java" fork="true">
-                                    <arg line="-uri src/main/resources/EventSimulatorAdminService.wsdl -u -uw -o target/generated-code -ns2p http://admin.eventsimulator.carbon.wso2.org=org.wso2.carbon.eventsimulator.stub,http://admin.eventsimulator.carbon.wso2.org/xsd=org.wso2.carbon.eventsimulator.stub.types"/>
+                                    <arg line="-uri src/main/resources/EventSimulatorAdminService.wsdl -u -uw -o target/generated-code -ns2p http://admin.simulator.event.carbon.wso2.org=org.wso2.carbon.event.simulator.stub,http://admin.simulator.event.carbon.wso2.org/xsd=org.wso2.carbon.event.simulator.stub.types"/>
                                     <classpath refid="wsdl2java.classpath"/>
                                 </java>
                             </tasks>

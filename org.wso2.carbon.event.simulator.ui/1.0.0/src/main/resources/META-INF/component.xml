@@ -6,13 +6,13 @@
         <menu>
             <id>event_simulator_menu</id>
             <i18n-key>event.simulator</i18n-key>
-            <i18n-bundle>org.wso2.carbon.eventsimulator.ui.i18n.Resources</i18n-bundle>
+            <i18n-bundle>org.wso2.carbon.event.simulator.ui.i18n.Resources</i18n-bundle>
             <parent-menu>tools_menu</parent-menu>
             <link>../eventsimulator/index.jsp</link>
             <region>region5</region>
             <order>40</order>
             <style-class>home</style-class>
-            <icon>../admin/images/delete.gif</icon>
+            <icon>../eventsimulator/images/event-simulator.png</icon>
             <require-permission>/permission/admin/login</require-permission>
         </menu>
         <!--<menu>-->

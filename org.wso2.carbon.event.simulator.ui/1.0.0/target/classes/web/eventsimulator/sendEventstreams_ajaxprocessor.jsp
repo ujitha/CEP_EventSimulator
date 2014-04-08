@@ -1,10 +1,10 @@
-<%@ page import="org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminService" %>
-<%@ page import="org.wso2.carbon.eventsimulator.ui.EventSimulatorUIUtils" %>
-<%@ page import="org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminServiceStub" %>
+<%@ page import="org.wso2.carbon.event.simulator.stub.EventSimulatorAdminService" %>
+<%@ page import="org.wso2.carbon.event.simulator.ui.EventSimulatorUIUtils" %>
+<%@ page import="org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceStub" %>
 <%@ page import="org.json.JSONObject" %>
 <%@ page import="org.json.JSONArray" %>
-<%@ page import="org.wso2.carbon.eventsimulator.stub.types.EventDto" %>
-<%@ page import="org.wso2.carbon.eventsimulator.stub.types.EventStreamAttributeValuesDto" %>
+<%@ page import="org.wso2.carbon.event.simulator.stub.types.EventDto" %>
+<%@ page import="org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto" %>
 <%
 
     String msg = null;

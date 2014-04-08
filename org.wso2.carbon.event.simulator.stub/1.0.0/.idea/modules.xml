@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.eventsimulator.stub.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.stub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.stub.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.stub.iml" />
     </modules>
   </component>
 </project>

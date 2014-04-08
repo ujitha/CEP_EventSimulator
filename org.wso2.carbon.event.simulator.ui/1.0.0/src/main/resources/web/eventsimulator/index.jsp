@@ -3,27 +3,28 @@
 <%@ page import="org.wso2.carbon.ui.CarbonUIUtil" %>
 <%@ page import="org.wso2.carbon.utils.ServerConstants" %>
 <%@ page import="org.wso2.carbon.ui.CarbonUIMessage" %>
-<%@ page import="org.wso2.carbon.eventsimulator.ui.EventSimulatorUIUtils" %>
-<%@ page import="org.wso2.carbon.eventsimulator.stub.EventSimulatorAdminServiceStub" %>
-<%@ page import="org.wso2.carbon.eventsimulator.admin.EventStreamInfoDto" %>
+<%@ page import="org.wso2.carbon.event.simulator.ui.EventSimulatorUIUtils" %>
+<%@ page import="org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceStub" %>
+<%@ page import="org.wso2.carbon.event.simulator.admin.EventStreamInfoDto" %>
 
 <%@ taglib uri="http://wso2.org/projects/carbon/taglibs/carbontags.jar" prefix="carbon" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <script type="text/javascript"
         src="../eventsimulator/js/eventstreamProperty_load.js"></script>
+<link type="text/css" href="css/eventSimulator.css" rel="stylesheet"/>
 
 <%
    EventSimulatorAdminServiceStub stub =EventSimulatorUIUtils.getEventSimulatorAdminService(config,session,request);
 
-   org.wso2.carbon.eventsimulator.stub.types.EventStreamInfoDto[] eventInfoArray=stub.getAllEventStreamInfoDto();
+   org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[] eventInfoArray=stub.getAllEventStreamInfoDto();
 
 %>
 
-<fmt:bundle basename="org.wso2.carbon.eventsimulator.ui.i18n.Resources">
+<fmt:bundle basename="org.wso2.carbon.event.simulator.ui.i18n.Resources">
 <carbon:breadcrumb
         label="eventformatter.list"
-        resourceBundle="org.wso2.carbon.eventsimulator.ui.i18n.Resources"
+        resourceBundle="org.wso2.carbon.event.simulator.ui.i18n.Resources"
         topPage="false"
         request="<%=request%>"/>
 
@@ -46,7 +47,7 @@
                         <table id="inputEventDetailTable" class="normal-nopadding" style="width:100%">
                             <tbody>
                             <tr>
-                                <td class="left-Col-med">Select the Event Stream<span class="required">*</span></td>
+                                <td class="leftCol-med">Select the Event Stream<span class="required">*</span></td>
                                 <td>
                                         <select name="EventStreamID" id="EventStreamID" onload="showEventProperties()" onchange="showEventProperties()">
 
