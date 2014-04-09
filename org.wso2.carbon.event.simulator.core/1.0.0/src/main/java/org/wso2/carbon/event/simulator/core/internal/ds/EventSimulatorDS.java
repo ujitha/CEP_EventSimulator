@@ -1,8 +1,6 @@
 package org.wso2.carbon.event.simulator.core.internal.ds;
 
-import org.wso2.carbon.event.simulator.core.CarbonEventSimulator;
 import org.wso2.carbon.event.simulator.core.EventSimulator;
-import org.wso2.carbon.event.simulator.core.internal.ds.EventSimulatorValueHolder;
 import org.wso2.carbon.event.stream.manager.core.EventStreamService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

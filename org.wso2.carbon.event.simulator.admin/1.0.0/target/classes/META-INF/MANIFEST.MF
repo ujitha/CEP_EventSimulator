@@ -1,11 +1,12 @@
 Manifest-Version: 1.0
 Service-Component: OSGI-INF/serviceComponents.xml
 Export-Package: org.wso2.carbon.event.simulator.admin;uses:="org.wso2.
- carbon.event.simulator.core,org.wso2.carbon.event.simulator.admin.uti
- l";version="1.0.0",org.wso2.carbon.event.simulator.admin.ds;uses:="or
- g.wso2.carbon.event.simulator.core,org.wso2.carbon.event.simulator.ad
- min.util";version="1.0.0",org.wso2.carbon.event.simulator.admin.util;
- uses:="org.wso2.carbon.event.simulator.core";version="1.0.0"
+ carbon.event.simulator.core,org.wso2.carbon.event.simulator.admin.int
+ ernal.util";version="1.0.0",org.wso2.carbon.event.simulator.admin.int
+ ernal.util;uses:="org.wso2.carbon.event.simulator.core";version="1.0.
+ 0",org.wso2.carbon.event.simulator.admin.internal.ds;uses:="org.wso2.
+ carbon.event.simulator.core,org.wso2.carbon.event.simulator.admin.int
+ ernal.util";version="1.0.0"
 Built-By: ujitha
 Tool: Bnd-1.43.0
 Bundle-Name: org.wso2.carbon.event.simulator.admin
@@ -14,7 +15,7 @@ Bundle-Vendor: WSO2 Inc
 DynamicImport-Package: *
 Build-Jdk: 1.6.0_45
 Bundle-Version: 1.0.0
-Bnd-LastModified: 1396934428064
+Bnd-LastModified: 1396968045436
 Bundle-ManifestVersion: 2
 Bundle-License: http://www.apache.org/licenses/LICENSE-2.0
 Bundle-Description: This is a Carbon bundle that represent the event s

@@ -4,12 +4,15 @@
     <facet type="Osmorc" name="OSGi">
       <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="org.wso2.carbon.event.simulator.ui-1.0.0.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="" bundleSymbolicName="org.wso2.carbon.event.simulator.ui" bundleVersion="1.0.0" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
         <additionalProperties>
+          <property key="Bundle-Description" value="org.wso2.carbon.event.simulator.UI provides the front-endfunctionalities" />
+          <property key="Bundle-Vendor" value="WSO2 Inc" />
+          <property key="Bundle-DocURL" value="http://wso2.org" />
           <property key="Bundle-Name" value="org.wso2.carbon.event.simulator.ui" />
           <property key="Carbon-Component" value="UIBundle" />
           <property key="Export-Package" value="org.wso2.carbon.event.simulator.ui.*," />
           <property key="Import-Package" value="org.wso2.carbon.event.simulator.stub.*,org.wso2.carbon.utils,org.apache.axis2.*,org.apache.axiom.*,*;resolution:=optional" />
           <property key="DynamicImport-Package" value="*" />
-          <property key="Include-Resource" value="org/wso2/carbon/event/simulator/ui/i18n/Resources.properties=$MODULE_DIR$/src/main/resources/org/wso2/carbon/event/simulator/ui/i18n/Resources.properties,web/eventsimulator/images/event-simulator.png=$MODULE_DIR$/src/main/resources/web/eventsimulator/images/event-simulator.png,web/eventsimulator/getProperties_ajaxprocessor.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/getProperties_ajaxprocessor.jsp,web/eventsimulator/js/eventstreamProperty_load.js=$MODULE_DIR$/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js,web/eventsimulator/sendEventstreams_ajaxprocessor.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/sendEventstreams_ajaxprocessor.jsp,web/eventsimulator/index.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/index.jsp,META-INF/component.xml=$MODULE_DIR$/src/main/resources/META-INF/component.xml" />
+          <property key="Include-Resource" value="org/wso2/carbon/event/simulator/ui/i18n/Resources.properties=$MODULE_DIR$/src/main/resources/org/wso2/carbon/event/simulator/ui/i18n/Resources.properties,web/eventsimulator/css/eventSimulator.css=$MODULE_DIR$/src/main/resources/web/eventsimulator/css/eventSimulator.css,web/eventsimulator/images/event-simulator.png=$MODULE_DIR$/src/main/resources/web/eventsimulator/images/event-simulator.png,web/eventsimulator/getProperties_ajaxprocessor.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/getProperties_ajaxprocessor.jsp,web/eventsimulator/js/eventstreamProperty_load.js=$MODULE_DIR$/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js,web/eventsimulator/sendEventstreams_ajaxprocessor.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/sendEventstreams_ajaxprocessor.jsp,web/eventsimulator/index.jsp=$MODULE_DIR$/src/main/resources/web/eventsimulator/index.jsp,META-INF/component.xml=$MODULE_DIR$/src/main/resources/META-INF/component.xml" />
         </additionalProperties>
         <additionalJARContents />
       </configuration>

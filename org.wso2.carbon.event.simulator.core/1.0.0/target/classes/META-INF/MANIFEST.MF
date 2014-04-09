@@ -2,8 +2,7 @@ Manifest-Version: 1.0
 Service-Component: OSGI-INF/serviceComponents.xml
 Export-Package: org.wso2.carbon.event.simulator.core.internal.ds;uses:
  ="org.wso2.carbon.event.simulator.core";version="1.0.0",org.wso2.carb
- on.event.simulator.core;uses:="org.wso2.carbon.event.simulator.core.i
- nternal.ds";version="1.0.0"
+ on.event.simulator.core;version="1.0.0"
 Built-By: ujitha
 Tool: Bnd-1.43.0
 Bundle-Name: org.wso2.carbon.event.simulator.core
@@ -12,7 +11,7 @@ Bundle-Vendor: WSO2 Inc
 DynamicImport-Package: *
 Build-Jdk: 1.6.0_45
 Bundle-Version: 1.0.0
-Bnd-LastModified: 1396934425383
+Bnd-LastModified: 1396965605263
 Bundle-ManifestVersion: 2
 Bundle-Description: org.wso2.carbon.event.simulator.core provides the 
  back-end        functionalities

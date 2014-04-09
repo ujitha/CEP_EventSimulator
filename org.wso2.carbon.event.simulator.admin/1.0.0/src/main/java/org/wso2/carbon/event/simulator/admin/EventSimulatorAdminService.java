@@ -5,7 +5,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.core.AbstractAdmin;
 import org.wso2.carbon.databridge.commons.StreamDefinition;
-import org.wso2.carbon.event.simulator.admin.util.EventSimulatorAdminvalueHolder;
+import org.wso2.carbon.event.simulator.admin.internal.util.EventSimulatorAdminvalueHolder;
 import org.wso2.carbon.event.simulator.core.EventDetailsValue;
 import org.wso2.carbon.event.simulator.core.EventSimulator;
 import org.wso2.carbon.databridge.commons.Attribute;
@@ -121,11 +121,6 @@ public class EventSimulatorAdminService extends AbstractAdmin {
         //System.out.println(eventDetails.getEventStreamName());
         EventStreamAttributeValuesDto[] eventAttributeArray=eventDetails.getAttributes();
 
-//        for(int i=0;i<eventAttributeArray.length;i++)
-//        {
-//            System.out.println("Attribute name : "+eventAttributeArray[i].getAttributeName()+" ,Attribute value : "+eventAttributeArray[i].getValue());
-//        }
-
         EventSimulator eventSimulator=EventSimulatorAdminvalueHolder.getEventSimulator();
 
         EventDetailsValue[] eventDetailsvalueArray=new EventDetailsValue[eventAttributeArray.length];
@@ -150,7 +145,7 @@ public class EventSimulatorAdminService extends AbstractAdmin {
                 }
                 catch(NumberFormatException e)
                 {
-                    throw new AxisFault("Inappropriate value types  " + e.getMessage(), e);
+                    throw new AxisFault("Inappropriate value types for the attribute - " +eventAttributeArray[i].getAttributeName() +" expected "+eventAttributeArray[i].getType()+" : "+ e.getMessage(), e);
                 }
             }
             else if(eventAttributeArray[i].getType().equals("DOUBLE")||eventAttributeArray[i].getType().equals("FLOAT"))
@@ -161,14 +156,14 @@ public class EventSimulatorAdminService extends AbstractAdmin {
                 }
                 catch (NumberFormatException e)
                 {
-                    throw new AxisFault("Inappropriate value types  " + e.getMessage(), e);
+                    throw new AxisFault("Inappropriate value types for the attribute - " +eventAttributeArray[i].getAttributeName() +" expected "+eventAttributeArray[i].getType()+" : "+ e.getMessage(), e);
                 }
             }
             else if(eventAttributeArray[i].getType().equals("BOOLEAN"))
             {
                 if(!Boolean.parseBoolean(eventAttributeArray[i].getValue()))
                 {
-                    throw new AxisFault("Inappropriate value type , boolean wanted in attribute : "+eventAttributeArray[i].getAttributeName());
+                    throw new AxisFault("Inappropriate value types for the attribute - " +eventAttributeArray[i].getAttributeName() +" expected "+eventAttributeArray[i].getType());
                 }
             }
 
