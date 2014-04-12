@@ -32,9 +32,7 @@ import org.apache.axis2.context.ConfigurationContext;
 import org.wso2.carbon.CarbonConstants;
 import org.wso2.carbon.ui.CarbonUIUtil;
 
-/**
- * Created by ujitha on 3/12/14.
- */
+
 public class EventSimulatorUIUtils {
 
     public static EventSimulatorAdminServiceStub getEventSimulatorAdminService(

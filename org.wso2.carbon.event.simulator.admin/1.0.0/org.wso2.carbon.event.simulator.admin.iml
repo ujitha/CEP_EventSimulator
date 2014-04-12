@@ -9,7 +9,8 @@
           <property key="Bundle-DocURL" value="http://wso2.org" />
           <property key="Bundle-Name" value="org.wso2.carbon.event.simulator.admin" />
           <property key="Carbon-Component" value="UIBundle" />
-          <property key="Export-Package" value="org.wso2.carbon.event.simulator.admin.*;" />
+          <property key="Private-Package" value="org.wso2.carbon.event.simulator.admin.internal.*" />
+          <property key="Export-Package" value="!org.wso2.carbon.event.simulator.admin.internal,org.wso2.carbon.event.simulator.admin.*;" />
           <property key="Import-Package" value="org.wso2.carbon.event.simulator.core.*;" />
           <property key="DynamicImport-Package" value="*" />
           <property key="Include-Resource" value="META-INF/services.xml=$MODULE_DIR$/src/main/resources/META-INF/services.xml" />
@@ -137,7 +138,6 @@
     <orderEntry type="library" name="Maven: org.antlr:stringtemplate:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.wso2.carbon:org.wso2.carbon.event.processor.api:1.0.1" level="project" />
   </component>
 </module>
 

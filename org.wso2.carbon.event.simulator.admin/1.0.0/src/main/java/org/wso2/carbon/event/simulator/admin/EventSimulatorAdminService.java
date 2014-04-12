@@ -1,3 +1,21 @@
+/*
+ * Copyright (c) 2005-2013, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ *  WSO2 Inc. licenses this file to you under the Apache License,
+ *  Version 2.0 (the "License"); you may not use this file except
+ *  in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing,
+ *  software distributed under the License is distributed on an
+ *  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, either express or implied.  See the License for the
+ *  specific language governing permissions and limitations
+ *  under the License.
+ */
+
 package org.wso2.carbon.event.simulator.admin;
 
 import org.apache.axis2.AxisFault;
@@ -17,9 +35,7 @@ import org.wso2.carbon.event.simulator.core.EventsDetail;
 import java.util.Collection;
 import java.util.List;
 
-/**
- * Created by ujitha on 3/11/14.
- */
+
 public class EventSimulatorAdminService extends AbstractAdmin {
 
     private static Log log = LogFactory.getLog(EventSimulatorAdminService.class);
@@ -30,10 +46,10 @@ public class EventSimulatorAdminService extends AbstractAdmin {
 
         EventSimulator eventSimulator= EventSimulatorAdminvalueHolder.getEventSimulator();
 
-        try{
-            Collection<StreamDefinition> eventStreamDefinitionList=eventSimulator.getAllEventStreamDefinitions();
+        try {
+            Collection<StreamDefinition> eventStreamDefinitionList = eventSimulator.getAllEventStreamDefinitions();
 
-            if(eventStreamDefinitionList!=null){
+            if (eventStreamDefinitionList != null) {
 
                 EventStreamInfoDto[] eventStreamInfoDtos = new EventStreamInfoDto[eventStreamDefinitionList.size()];
                 int index = 0;
@@ -45,14 +61,12 @@ public class EventSimulatorAdminService extends AbstractAdmin {
                     eventStreamInfoDtos[index].setStreamDescription(streamDefinition.getDescription());
 
                     // Set Meta attributes to EventStreamInfoDtos
-                    List<Attribute> meataDataAttributeList=streamDefinition.getMetaData();
+                    List<Attribute> meataDataAttributeList = streamDefinition.getMetaData();
 
 
-                    if(meataDataAttributeList!=null)
-                    {
-                        EventStreamAttributeDto[]  metaDataAttributeArray=new EventStreamAttributeDto[meataDataAttributeList.size()];
-                         for(int i=0;i<metaDataAttributeArray.length;i++)
-                        {
+                    if (meataDataAttributeList != null) {
+                        EventStreamAttributeDto[] metaDataAttributeArray = new EventStreamAttributeDto[meataDataAttributeList.size()];
+                        for (int i = 0; i < metaDataAttributeArray.length; i++) {
 
                             metaDataAttributeArray[i] = new EventStreamAttributeDto();
                             metaDataAttributeArray[i].setAttributeName(meataDataAttributeList.get(i).getName());
@@ -63,16 +77,14 @@ public class EventSimulatorAdminService extends AbstractAdmin {
                         eventStreamInfoDtos[index].setMetaAttributes(metaDataAttributeArray);
                     }
                     //Set correlation attributes to EventStreamInfoDtos
-                    List<Attribute> correlationDataAttributeList=streamDefinition.getCorrelationData();
+                    List<Attribute> correlationDataAttributeList = streamDefinition.getCorrelationData();
 
 
-                    if(correlationDataAttributeList!=null)
-                    {
-                        EventStreamAttributeDto[]  correlationDataAttributeArray=new EventStreamAttributeDto[correlationDataAttributeList.size()];
+                    if (correlationDataAttributeList != null) {
+                        EventStreamAttributeDto[] correlationDataAttributeArray = new EventStreamAttributeDto[correlationDataAttributeList.size()];
 
-                        for(int j=0;j<correlationDataAttributeArray.length;j++)
-                        {
-                            correlationDataAttributeArray[j]=new EventStreamAttributeDto();
+                        for (int j = 0; j < correlationDataAttributeArray.length; j++) {
+                            correlationDataAttributeArray[j] = new EventStreamAttributeDto();
                             correlationDataAttributeArray[j].setAttributeName(correlationDataAttributeList.get(j).getName());
                             correlationDataAttributeArray[j].setAttributeType(correlationDataAttributeList.get(j).getType().toString());
                         }
@@ -81,15 +93,13 @@ public class EventSimulatorAdminService extends AbstractAdmin {
                     }
                     //Set payload data attributes to EventStreamInfoDtos
 
-                    List<Attribute> payloadDataAttributeList=streamDefinition.getPayloadData();
+                    List<Attribute> payloadDataAttributeList = streamDefinition.getPayloadData();
 
 
-                    if(payloadDataAttributeList!=null)
-                    {
-                        EventStreamAttributeDto[] payloadDataAttributesArray =new EventStreamAttributeDto[payloadDataAttributeList.size()];
-                        for(int k=0;k<payloadDataAttributesArray.length;k++)
-                        {
-                            payloadDataAttributesArray[k]=new EventStreamAttributeDto();
+                    if (payloadDataAttributeList != null) {
+                        EventStreamAttributeDto[] payloadDataAttributesArray = new EventStreamAttributeDto[payloadDataAttributeList.size()];
+                        for (int k = 0; k < payloadDataAttributesArray.length; k++) {
+                            payloadDataAttributesArray[k] = new EventStreamAttributeDto();
                             payloadDataAttributesArray[k].setAttributeName(payloadDataAttributeList.get(k).getName());
                             payloadDataAttributesArray[k].setAttributeType(payloadDataAttributeList.get(k).getType().toString());
                         }
@@ -100,12 +110,11 @@ public class EventSimulatorAdminService extends AbstractAdmin {
                 }
                 return eventStreamInfoDtos;
 
-            }else{
+            } else {
                 return new EventStreamInfoDto[0];
             }
 
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.fillInStackTrace();
         }
 
@@ -113,63 +122,53 @@ public class EventSimulatorAdminService extends AbstractAdmin {
     }
 
 
-    public void getEventDetails(EventDto eventdetails)throws AxisFault{
+    public void getEventDetails(EventDto eventdetails) throws AxisFault {
 
-        EventDto eventDetails=new EventDto();
-        eventDetails=eventdetails;
+        EventDto eventDetails = new EventDto();
+        eventDetails = eventdetails;
 
-        //System.out.println(eventDetails.getEventStreamName());
-        EventStreamAttributeValuesDto[] eventAttributeArray=eventDetails.getAttributes();
 
-        EventSimulator eventSimulator=EventSimulatorAdminvalueHolder.getEventSimulator();
+        EventStreamAttributeValuesDto[] eventAttributeArray = eventDetails.getAttributes();
 
-        EventDetailsValue[] eventDetailsvalueArray=new EventDetailsValue[eventAttributeArray.length];
+        EventSimulator eventSimulator = EventSimulatorAdminvalueHolder.getEventSimulator();
 
-        for(int i=0;i<eventAttributeArray.length;i++)
-        {
-            eventDetailsvalueArray[i]=new EventDetailsValue();
+        EventDetailsValue[] eventDetailsvalueArray = new EventDetailsValue[eventAttributeArray.length];
+
+        for (int i = 0; i < eventAttributeArray.length; i++) {
+
+            eventDetailsvalueArray[i] = new EventDetailsValue();
 
             eventDetailsvalueArray[i].setAttributeName(eventAttributeArray[i].getAttributeName());
             eventDetailsvalueArray[i].setType(eventAttributeArray[i].getType());
             eventDetailsvalueArray[i].setValue(eventAttributeArray[i].getValue());
 
-            if(eventAttributeArray[i].getValue().equals(""))
-            {
+            if (eventAttributeArray[i].getValue().equals("")) {
+
                 throw new AxisFault("Fill all the attribute fields");
-            }
-           else if(eventAttributeArray[i].getType().equals("INT")||eventAttributeArray[i].getType().equals("LONG"))
-            {
-                try{
-                    int val1=Integer.parseInt(eventAttributeArray[i].getValue());
-                    long val2=Long.parseLong(eventAttributeArray[i].getValue());
+            } else if (eventAttributeArray[i].getType().equals("INT") || eventAttributeArray[i].getType().equals("LONG")) {
+
+                try {
+                    int val1 = Integer.parseInt(eventAttributeArray[i].getValue());
+                    long val2 = Long.parseLong(eventAttributeArray[i].getValue());
+                } catch (NumberFormatException e) {
+                    throw new AxisFault("Inappropriate value types for the attribute - " + eventAttributeArray[i].getAttributeName() + " expected " + eventAttributeArray[i].getType() + " : " + e.getMessage(), e);
                 }
-                catch(NumberFormatException e)
-                {
-                    throw new AxisFault("Inappropriate value types for the attribute - " +eventAttributeArray[i].getAttributeName() +" expected "+eventAttributeArray[i].getType()+" : "+ e.getMessage(), e);
+            } else if (eventAttributeArray[i].getType().equals("DOUBLE") || eventAttributeArray[i].getType().equals("FLOAT")) {
+                try {
+                    double val1 = Double.parseDouble(eventAttributeArray[i].getValue());
+                    float val2 = Float.parseFloat(eventAttributeArray[i].getValue());
+                } catch (NumberFormatException e) {
+                    throw new AxisFault("Inappropriate value types for the attribute - " + eventAttributeArray[i].getAttributeName() + " expected " + eventAttributeArray[i].getType() + " : " + e.getMessage(), e);
                 }
-            }
-            else if(eventAttributeArray[i].getType().equals("DOUBLE")||eventAttributeArray[i].getType().equals("FLOAT"))
-            {
-                try{
-                    double val1=Double.parseDouble(eventAttributeArray[i].getValue());
-                    float val2=Float.parseFloat(eventAttributeArray[i].getValue());
-                }
-                catch (NumberFormatException e)
-                {
-                    throw new AxisFault("Inappropriate value types for the attribute - " +eventAttributeArray[i].getAttributeName() +" expected "+eventAttributeArray[i].getType()+" : "+ e.getMessage(), e);
-                }
-            }
-            else if(eventAttributeArray[i].getType().equals("BOOLEAN"))
-            {
-                if(!Boolean.parseBoolean(eventAttributeArray[i].getValue()))
-                {
-                    throw new AxisFault("Inappropriate value types for the attribute - " +eventAttributeArray[i].getAttributeName() +" expected "+eventAttributeArray[i].getType());
+            } else if (eventAttributeArray[i].getType().equals("BOOLEAN")) {
+                if (!Boolean.parseBoolean(eventAttributeArray[i].getValue())) {
+                    throw new AxisFault("Inappropriate value types for the attribute - " + eventAttributeArray[i].getAttributeName() + " expected " + eventAttributeArray[i].getType());
                 }
             }
 
         }
 
-        EventsDetail eventDetailObject=new EventsDetail();
+        EventsDetail eventDetailObject = new EventsDetail();
 
         eventDetailObject.setEventStreamName(eventDetails.getEventStreamName());
         eventDetailObject.setAttributes(eventDetailsvalueArray);
