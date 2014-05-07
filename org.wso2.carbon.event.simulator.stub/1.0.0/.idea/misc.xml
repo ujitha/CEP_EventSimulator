@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="Osmorc" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="IdProvider" IDEtalkID="03E4E3BFE7D6FCA49AF73B44248CE79E" />
+  <component name="IdProvider" IDEtalkID="E158DC5F614FA7850EB9E755F7CEC284" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

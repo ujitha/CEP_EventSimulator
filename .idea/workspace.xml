@@ -13,33 +13,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/eventsimulator/admin/EventStreamAttributeValuesDto.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/eventsimulator/admin/EventStreamInfoDto.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/eventsimulator/admin/StreamDefinitionDto.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/META-INF/services.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/EventDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/EventSimulatorAdminService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/EventStreamAttributeDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/EventStreamAttributeValuesDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/EventStreamInfoDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/StreamDefinitionDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/ds/EventSimulatorAdminDS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/internal/ds/EventSimulatorAdminDS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/internal/util/EventSimulatorAdminvalueHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/event/simulator/admin/util/EventSimulatorAdminvalueHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/eventsimulator/admin/EventDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminDS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminvalueHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/eventsimulator/admin/EventStreamAttributeDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/eventsimulator/admin/EventStreamAttributeValuesDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/eventsimulator/admin/EventStreamInfoDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/classes/org/wso2/carbon/eventsimulator/admin/StreamDefinitionDto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/org.wso2.carbon.event.simulator.admin-1.0.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/scr-plugin-generated/OSGI-INF/metatype/metatype.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/scr-plugin-generated/OSGI-INF/scr-plugin/scrinfo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/scr-plugin-generated/OSGI-INF/serviceComponents.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/target/timestamp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/.idea/copyright/profiles_settings.xml" afterPath="" />
@@ -158,31 +131,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/src/main/java/org/wso2/carbon/eventsimulator/core/EventSimulatorValueHolder.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/src/main/java/org/wso2/carbon/eventsimulator/core/EventStreamProducer.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/src/main/java/org/wso2/carbon/eventsimulator/core/EventsDetail.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/CarbonEventSimulator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/EventDetailsValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/EventSimulator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/EventStreamProducer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/EventsDetail.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/internal/ds/CarbonEventSimulator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/internal/ds/EventSimulatorDS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/internal/ds/EventSimulatorValueHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/event/simulator/core/internal/ds/EventStreamProducer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/eventsimulator/core/CarbonEventSimulator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/eventsimulator/core/EventDetailsValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/eventsimulator/core/EventSimulator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/eventsimulator/core/EventSimulatorDS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/eventsimulator/core/EventSimulatorValueHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/eventsimulator/core/EventStreamProducer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/classes/org/wso2/carbon/eventsimulator/core/EventsDetail.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/org.wso2.carbon.event.simulator.core-1.0.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/scr-plugin-generated/OSGI-INF/metatype/metatype.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/scr-plugin-generated/OSGI-INF/scr-plugin/scrinfo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/scr-plugin-generated/OSGI-INF/serviceComponents.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/target/timestamp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.stub/1.0.0/org.wso2.carbon.eventsimulator.stub.iml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.stub/1.0.0/target/classes/org/wso2/carbon/eventsimulator/stub/EventSimulatorAdminService.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.stub/1.0.0/target/classes/org/wso2/carbon/eventsimulator/stub/EventSimulatorAdminServiceCallbackHandler.class" afterPath="" />
@@ -219,25 +167,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/org.wso2.carbon.eventsimulator.ui.iws" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/java/org/wso2/carbon/eventsimulator/ui/EventSimulatorUIUtils.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/org/wso2/carbon/eventsimulator/ui/i18n/Resources.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/META-INF/component.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/org/wso2/carbon/event/simulator/ui/EventSimulatorUIUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/org/wso2/carbon/event/simulator/ui/i18n/Resources.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/org/wso2/carbon/eventsimulator/ui/EventSimulatorUIUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/org/wso2/carbon/eventsimulator/ui/i18n/Resources.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/web/eventsimulator/css/eventSimulator.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/web/eventsimulator/docs/userguide.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/web/eventsimulator/getProperties_ajaxprocessor.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/web/eventsimulator/images/event-simulator.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/web/eventsimulator/images/eventSimulatorUI.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/web/eventsimulator/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/web/eventsimulator/js/eventstreamProperty_load.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/classes/web/eventsimulator/sendEventstreams_ajaxprocessor.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/org.wso2.carbon.event.simulator.ui-1.0.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/target/timestamp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.admin/org.wso2.carbon.eventsimulator.admin.iml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.admin/pom.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/EventDto.java" afterPath="" />
@@ -466,6 +395,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.ui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.ui/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/org.wso2.carbon.eventsimulator.ui/target/org.wso2.carbon.eventsimulator.ui-1.0.0.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="org.wso2.carbon.event-simulator.core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -529,19 +459,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="EventSimulatorAdminService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/EventSimulatorAdminService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="480">
+            <state line="118" column="3" selection-start="5689" selection-end="5689" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="2790">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventSimulatorAdminService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/EventSimulatorAdminService.java">
+      <file leaf-file-name="sendEventstreams_ajaxprocessor.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/sendEventstreams_ajaxprocessor.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="3" selection-start="5689" selection-end="5689" vertical-scroll-proportion="0.31496063" vertical-offset="1185" max-vertical-offset="2325">
+            <state line="39" column="0" selection-start="1588" selection-end="1588" vertical-scroll-proportion="-13.125" vertical-offset="270" max-vertical-offset="870">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/resources/META-INF/services.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="61" selection-start="350" selection-end="350" vertical-scroll-proportion="0.04178273" vertical-offset="90" max-vertical-offset="450">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarbonEventSimulator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/src/main/java/org/wso2/carbon/event/simulator/core/CarbonEventSimulator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="13" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1905">
               <folding />
             </state>
           </provider>
@@ -550,8 +498,13 @@
       <file leaf-file-name="eventstreamProperty_load.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="0" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0" vertical-offset="1554" max-vertical-offset="3420">
-              <folding />
+            <state line="121" column="0" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0" vertical-offset="2205" max-vertical-offset="3420">
+              <folding>
+                <marker date="1397108064683" expanded="false" signature="1923:1933" placeholder="..." />
+                <marker date="1397108064683" expanded="false" signature="3316:3327" placeholder="..." />
+                <marker date="1397108064683" expanded="false" signature="4754:4765" placeholder="..." />
+                <marker date="1397108064683" expanded="false" signature="6183:6194" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -634,8 +587,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
-    <option name="y" value="130" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
     <option name="width" value="1303" />
     <option name="height" value="773" />
   </component>
@@ -686,15 +639,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Production" />
-        <subPane subId="Tests" />
-        <subPane subId="Project Files" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -822,82 +766,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event-simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event-simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.wso2.carbon.event.simulator.ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1.0.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eventsimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event-simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event-simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.wso2.carbon.event.simulator.ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1.0.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eventsimulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1194,8 +1062,51 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event-simulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event-simulator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.wso2.carbon.event.simulator.admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Production" />
+        <subPane subId="Tests" />
+        <subPane subId="Project Files" />
       </pane>
     </panes>
   </component>
@@ -1579,11 +1490,13 @@
       <workItem from="1396970216581" duration="292000" />
       <workItem from="1396974191075" duration="2142000" />
       <workItem from="1398055710642" duration="29000" />
+      <workItem from="1398083316560" duration="1985000" />
+      <workItem from="1398141308064" duration="50000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401656000" />
+    <option name="totallyTimeSpent" value="403691000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1606,7 +1519,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="130" width="1303" height="773" extended-state="6" />
+    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1688,20 +1601,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/EventSimulatorAdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="2089" selection-end="2089" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="2580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="24" selection-start="6690" selection-end="6690" vertical-scroll-proportion="0.0" vertical-offset="1689" max-vertical-offset="3780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
@@ -1719,7 +1618,12 @@
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="130" column="24" selection-start="6690" selection-end="6690" vertical-scroll-proportion="0.0" vertical-offset="1689" max-vertical-offset="3780">
-          <folding />
+          <folding>
+            <marker date="1397108064683" expanded="false" signature="1923:1933" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="3316:3327" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="4754:4765" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="6183:6194" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1740,7 +1644,12 @@
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="130" column="24" selection-start="6690" selection-end="6690" vertical-scroll-proportion="0.0" vertical-offset="1689" max-vertical-offset="3780">
-          <folding />
+          <folding>
+            <marker date="1397108064683" expanded="false" signature="1923:1933" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="3316:3327" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="4754:4765" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="6183:6194" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1885,42 +1794,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/EventDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.60913706" vertical-offset="0" max-vertical-offset="394">
-          <folding />
-        </state>
+        <state line="22" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.60913706" vertical-offset="0" max-vertical-offset="394" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/EventStreamAttributeDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.19035533" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.19035533" vertical-offset="0" max-vertical-offset="465" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/EventStreamAttributeValuesDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.19035533" vertical-offset="0" max-vertical-offset="435">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.19035533" vertical-offset="0" max-vertical-offset="435" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/EventStreamInfoDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.19685039" vertical-offset="0" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.19685039" vertical-offset="0" max-vertical-offset="855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/StreamDefinitionDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.19035533" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/sendEventstreams_ajaxprocessor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="39" selection-start="445" selection-end="445" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="900" />
+        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.19035533" vertical-offset="0" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/getProperties_ajaxprocessor.jsp">
@@ -1941,13 +1835,6 @@
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="46" selection-start="1213" selection-end="1213" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="1560" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/resources/META-INF/services.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="61" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/META-INF/component.xml">
@@ -1972,23 +1859,56 @@
         <state line="45" column="39" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.6666667" vertical-offset="421" max-vertical-offset="1755" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/src/main/java/org/wso2/carbon/event/simulator/core/internal/ds/CarbonEventSimulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="13" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.18584071" vertical-offset="0" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.core/1.0.0/src/main/java/org/wso2/carbon/event/simulator/core/CarbonEventSimulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="13" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+        <state line="7" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.18584071" vertical-offset="0" max-vertical-offset="565">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/js/eventstreamProperty_load.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="0" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0" vertical-offset="1554" max-vertical-offset="3420">
-          <folding />
+        <state line="121" column="0" selection-start="6875" selection-end="6875" vertical-scroll-proportion="0.0" vertical-offset="2205" max-vertical-offset="3420">
+          <folding>
+            <marker date="1397108064683" expanded="false" signature="1923:1933" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="3316:3327" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="4754:4765" placeholder="..." />
+            <marker date="1397108064683" expanded="false" signature="6183:6194" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/java/org/wso2/carbon/event/simulator/admin/EventSimulatorAdminService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="3" selection-start="5689" selection-end="5689" vertical-scroll-proportion="0.31496063" vertical-offset="1185" max-vertical-offset="2325">
+        <state line="118" column="3" selection-start="5689" selection-end="5689" vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.ui/1.0.0/src/main/resources/web/eventsimulator/sendEventstreams_ajaxprocessor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1588" selection-end="1588" vertical-scroll-proportion="-13.125" vertical-offset="270" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.event.simulator.admin/1.0.0/src/main/resources/META-INF/services.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="61" selection-start="350" selection-end="350" vertical-scroll-proportion="0.04178273" vertical-offset="90" max-vertical-offset="450">
           <folding />
         </state>
       </provider>

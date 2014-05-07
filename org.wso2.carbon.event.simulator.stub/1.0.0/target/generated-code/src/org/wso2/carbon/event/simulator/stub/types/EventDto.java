@@ -25,31 +25,31 @@
             
 
                         /**
-                        * field for Attributes
+                        * field for AttributeValues
                         * This was an Array!
                         */
 
                         
-                                    protected org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[] localAttributes ;
+                                    protected java.lang.String[] localAttributeValues ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
-                           protected boolean localAttributesTracker = false ;
+                           protected boolean localAttributeValuesTracker = false ;
 
-                           public boolean isAttributesSpecified(){
-                               return localAttributesTracker;
+                           public boolean isAttributeValuesSpecified(){
+                               return localAttributeValuesTracker;
                            }
 
                            
 
                            /**
                            * Auto generated getter method
-                           * @return org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[]
+                           * @return java.lang.String[]
                            */
-                           public  org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[] getAttributes(){
-                               return localAttributes;
+                           public  java.lang.String[] getAttributeValues(){
+                               return localAttributeValues;
                            }
 
                            
@@ -58,67 +58,67 @@
 
                                
                               /**
-                               * validate the array for Attributes
+                               * validate the array for AttributeValues
                                */
-                              protected void validateAttributes(org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[] param){
+                              protected void validateAttributeValues(java.lang.String[] param){
                              
                               }
 
 
                              /**
                               * Auto generated setter method
-                              * @param param Attributes
+                              * @param param AttributeValues
                               */
-                              public void setAttributes(org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[] param){
+                              public void setAttributeValues(java.lang.String[] param){
                               
-                                   validateAttributes(param);
+                                   validateAttributeValues(param);
 
-                               localAttributesTracker = true;
+                               localAttributeValuesTracker = true;
                                       
-                                      this.localAttributes=param;
+                                      this.localAttributeValues=param;
                               }
 
                                
                              
                              /**
                              * Auto generated add method for the array for convenience
-                             * @param param org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto
+                             * @param param java.lang.String
                              */
-                             public void addAttributes(org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto param){
-                                   if (localAttributes == null){
-                                   localAttributes = new org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[]{};
+                             public void addAttributeValues(java.lang.String param){
+                                   if (localAttributeValues == null){
+                                   localAttributeValues = new java.lang.String[]{};
                                    }
 
                             
                                  //update the setting tracker
-                                localAttributesTracker = true;
+                                localAttributeValuesTracker = true;
                             
 
                                java.util.List list =
-                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localAttributes);
+                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localAttributeValues);
                                list.add(param);
-                               this.localAttributes =
-                             (org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[])list.toArray(
-                            new org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[list.size()]);
+                               this.localAttributeValues =
+                             (java.lang.String[])list.toArray(
+                            new java.lang.String[list.size()]);
 
                              }
                              
 
                         /**
-                        * field for EventStreamName
+                        * field for EventStreamId
                         */
 
                         
-                                    protected java.lang.String localEventStreamName ;
+                                    protected java.lang.String localEventStreamId ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
-                           protected boolean localEventStreamNameTracker = false ;
+                           protected boolean localEventStreamIdTracker = false ;
 
-                           public boolean isEventStreamNameSpecified(){
-                               return localEventStreamNameTracker;
+                           public boolean isEventStreamIdSpecified(){
+                               return localEventStreamIdTracker;
                            }
 
                            
@@ -127,20 +127,20 @@
                            * Auto generated getter method
                            * @return java.lang.String
                            */
-                           public  java.lang.String getEventStreamName(){
-                               return localEventStreamName;
+                           public  java.lang.String getEventStreamId(){
+                               return localEventStreamId;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param EventStreamName
+                               * @param param EventStreamId
                                */
-                               public void setEventStreamName(java.lang.String param){
-                            localEventStreamNameTracker = true;
+                               public void setEventStreamId(java.lang.String param){
+                            localEventStreamIdTracker = true;
                                    
-                                            this.localEventStreamName=param;
+                                            this.localEventStreamId=param;
                                     
 
                                }
@@ -204,38 +204,49 @@
 
                
                    }
-                if (localAttributesTracker){
-                                       if (localAttributes!=null){
-                                            for (int i = 0;i < localAttributes.length;i++){
-                                                if (localAttributes[i] != null){
-                                                 localAttributes[i].serialize(new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd","attributes"),
-                                                           xmlWriter);
+                if (localAttributeValuesTracker){
+                             if (localAttributeValues!=null) {
+                                   namespace = "http://admin.simulator.event.carbon.wso2.org/xsd";
+                                   for (int i = 0;i < localAttributeValues.length;i++){
+                                        
+                                            if (localAttributeValues[i] != null){
+                                        
+                                                writeStartElement(null, namespace, "attributeValues", xmlWriter);
+
+                                            
+                                                        xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAttributeValues[i]));
+                                                    
+                                                xmlWriter.writeEndElement();
+                                              
                                                 } else {
                                                    
-                                                            writeStartElement(null, "http://admin.simulator.event.carbon.wso2.org/xsd", "attributes", xmlWriter);
-
-                                                           // write the nil attribute
-                                                           writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                           xmlWriter.writeEndElement();
-                                                    
+                                                           // write null attribute
+                                                            namespace = "http://admin.simulator.event.carbon.wso2.org/xsd";
+                                                            writeStartElement(null, namespace, "attributeValues", xmlWriter);
+                                                            writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                            xmlWriter.writeEndElement();
+                                                       
                                                 }
 
-                                            }
-                                     } else {
-                                        
-                                                writeStartElement(null, "http://admin.simulator.event.carbon.wso2.org/xsd", "attributes", xmlWriter);
+                                   }
+                             } else {
+                                 
+                                         // write the null attribute
+                                        // write null attribute
+                                           writeStartElement(null, "http://admin.simulator.event.carbon.wso2.org/xsd", "attributeValues", xmlWriter);
 
-                                               // write the nil attribute
-                                               writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                               xmlWriter.writeEndElement();
-                                        
-                                    }
-                                 } if (localEventStreamNameTracker){
+                                           // write the nil attribute
+                                           writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                           xmlWriter.writeEndElement();
+                                    
+                             }
+
+                        } if (localEventStreamIdTracker){
                                     namespace = "http://admin.simulator.event.carbon.wso2.org/xsd";
-                                    writeStartElement(null, namespace, "eventStreamName", xmlWriter);
+                                    writeStartElement(null, namespace, "eventStreamId", xmlWriter);
                              
 
-                                          if (localEventStreamName==null){
+                                          if (localEventStreamId==null){
                                               // write the nil attribute
                                               
                                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
@@ -243,7 +254,7 @@
                                           }else{
 
                                         
-                                                   xmlWriter.writeCharacters(localEventStreamName);
+                                                   xmlWriter.writeCharacters(localEventStreamId);
                                             
                                           }
                                     
@@ -428,37 +439,39 @@
                  java.util.ArrayList elementList = new java.util.ArrayList();
                  java.util.ArrayList attribList = new java.util.ArrayList();
 
-                 if (localAttributesTracker){
-                             if (localAttributes!=null) {
-                                 for (int i = 0;i < localAttributes.length;i++){
+                 if (localAttributeValuesTracker){
+                            if (localAttributeValues!=null){
+                                  for (int i = 0;i < localAttributeValues.length;i++){
+                                      
+                                         if (localAttributeValues[i] != null){
+                                          elementList.add(new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd",
+                                                                              "attributeValues"));
+                                          elementList.add(
+                                          org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localAttributeValues[i]));
+                                          } else {
+                                             
+                                                    elementList.add(new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd",
+                                                                              "attributeValues"));
+                                                    elementList.add(null);
+                                                
+                                          }
+                                      
 
-                                    if (localAttributes[i] != null){
-                                         elementList.add(new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd",
-                                                                          "attributes"));
-                                         elementList.add(localAttributes[i]);
-                                    } else {
-                                        
-                                                elementList.add(new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd",
-                                                                          "attributes"));
-                                                elementList.add(null);
-                                            
-                                    }
+                                  }
+                            } else {
+                              
+                                    elementList.add(new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd",
+                                                                              "attributeValues"));
+                                    elementList.add(null);
+                                
+                            }
 
-                                 }
-                             } else {
-                                 
-                                        elementList.add(new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd",
-                                                                          "attributes"));
-                                        elementList.add(localAttributes);
-                                    
-                             }
-
-                        } if (localEventStreamNameTracker){
+                        } if (localEventStreamIdTracker){
                                       elementList.add(new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd",
-                                                                      "eventStreamName"));
+                                                                      "eventStreamId"));
                                  
-                                         elementList.add(localEventStreamName==null?null:
-                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localEventStreamName));
+                                         elementList.add(localEventStreamId==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localEventStreamId));
                                     }
 
                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
@@ -540,55 +553,56 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd","attributes").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd","attributeValues").equals(reader.getName())){
                                 
                                     
                                     
                                     // Process the array and step past its final element's end.
                                     
+                                              nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                              if ("true".equals(nillableValue) || "1".equals(nillableValue)){
+                                                  list1.add(null);
+                                                       
+                                                  reader.next();
+                                              } else {
+                                            list1.add(reader.getElementText());
+                                            }
+                                            //loop until we find a start element that is not part of this array
+                                            boolean loopDone1 = false;
+                                            while(!loopDone1){
+                                                // Ensure we are at the EndElement
+                                                while (!reader.isEndElement()){
+                                                    reader.next();
+                                                }
+                                                // Step out of this element
+                                                reader.next();
+                                                // Step to next element event.
+                                                while (!reader.isStartElement() && !reader.isEndElement())
+                                                    reader.next();
+                                                if (reader.isEndElement()){
+                                                    //two continuous end elements means we are exiting the xml structure
+                                                    loopDone1 = true;
+                                                } else {
+                                                    if (new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd","attributeValues").equals(reader.getName())){
+                                                         
                                                           nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
                                                           if ("true".equals(nillableValue) || "1".equals(nillableValue)){
                                                               list1.add(null);
+                                                                   
                                                               reader.next();
                                                           } else {
-                                                        list1.add(org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto.Factory.parse(reader));
-                                                                }
-                                                        //loop until we find a start element that is not part of this array
-                                                        boolean loopDone1 = false;
-                                                        while(!loopDone1){
-                                                            // We should be at the end element, but make sure
-                                                            while (!reader.isEndElement())
-                                                                reader.next();
-                                                            // Step out of this element
-                                                            reader.next();
-                                                            // Step to next element event.
-                                                            while (!reader.isStartElement() && !reader.isEndElement())
-                                                                reader.next();
-                                                            if (reader.isEndElement()){
-                                                                //two continuous end elements means we are exiting the xml structure
-                                                                loopDone1 = true;
-                                                            } else {
-                                                                if (new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd","attributes").equals(reader.getName())){
-                                                                    
-                                                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                                                          list1.add(null);
-                                                                          reader.next();
-                                                                      } else {
-                                                                    list1.add(org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto.Factory.parse(reader));
-                                                                        }
-                                                                }else{
-                                                                    loopDone1 = true;
-                                                                }
-                                                            }
+                                                        list1.add(reader.getElementText());
                                                         }
-                                                        // call the converter utility  to convert and set the array
-                                                        
-                                                        object.setAttributes((org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto[])
-                                                            org.apache.axis2.databinding.utils.ConverterUtil.convertToArray(
-                                                                org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto.class,
-                                                                list1));
-                                                            
+                                                    }else{
+                                                        loopDone1 = true;
+                                                    }
+                                                }
+                                            }
+                                            // call the converter utility  to convert and set the array
+                                            
+                                                    object.setAttributeValues((java.lang.String[])
+                                                        list1.toArray(new java.lang.String[list1.size()]));
+                                                
                               }  // End of if for expected property start element
                                 
                                     else {
@@ -598,7 +612,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd","eventStreamName").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://admin.simulator.event.carbon.wso2.org/xsd","eventStreamId").equals(reader.getName())){
                                 
                                        nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
                                        if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
@@ -606,7 +620,7 @@
 
                                     java.lang.String content = reader.getElementText();
                                     
-                                              object.setEventStreamName(
+                                              object.setEventStreamId(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {

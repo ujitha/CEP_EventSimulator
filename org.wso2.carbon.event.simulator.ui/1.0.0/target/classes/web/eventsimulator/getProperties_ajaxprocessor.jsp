@@ -1,31 +1,29 @@
 <%@ page import="org.wso2.carbon.event.simulator.ui.EventSimulatorUIUtils" %>
 <%@ page import="org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceStub" %>
-<%@ page import="org.wso2.carbon.event.simulator.admin.EventStreamInfoDto" %>
+
 <%@ page import="com.google.gson.Gson" %>
+<%@ page import="org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto" %>
 <%
 
-    EventSimulatorAdminServiceStub stub =EventSimulatorUIUtils.getEventSimulatorAdminService(config,session,request);
-    org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[] eventInfoArray=stub.getAllEventStreamInfoDto();
+    EventSimulatorAdminServiceStub stub = EventSimulatorUIUtils.getEventSimulatorAdminService(config, session, request);
+    org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[] eventInfoArray = stub.getAllEventStreamInfoDto();
 
-    String eventName=request.getParameter("eventName");
-    org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto selctedEvent=new org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto();
+    String eventName = request.getParameter("eventName");
+    StreamDefinitionInfoDto selectedEvent =new StreamDefinitionInfoDto();
 
-    for(int i=0;i<eventInfoArray.length;i++)
-    {
-        if(eventInfoArray[i].getStreamName().equals(eventName))
-        {
-            selctedEvent=eventInfoArray[i];
+    for (int i = 0; i < eventInfoArray.length; i++) {
+        if (eventInfoArray[i].getStreamName().equals(eventName)) {
+            selectedEvent = eventInfoArray[i];
             break;
         }
 
     }
 
 
-    String eventPropertyString="";
+    String eventPropertyString = "";
 
-    if(selctedEvent!=null)
-    {
-       eventPropertyString=new Gson().toJson(selctedEvent);
+    if (selectedEvent != null) {
+        eventPropertyString = new Gson().toJson(selectedEvent);
 
 
 %>

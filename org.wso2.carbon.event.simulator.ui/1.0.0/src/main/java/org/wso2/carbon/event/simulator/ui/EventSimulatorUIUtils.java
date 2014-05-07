@@ -20,17 +20,17 @@
 package org.wso2.carbon.event.simulator.ui;
 
 
-import org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceStub;
-import sun.net.dns.ResolverConfiguration;
-import javax.servlet.ServletConfig;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import org.apache.axis2.AxisFault;
 import org.apache.axis2.client.Options;
 import org.apache.axis2.client.ServiceClient;
 import org.apache.axis2.context.ConfigurationContext;
 import org.wso2.carbon.CarbonConstants;
+import org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceStub;
 import org.wso2.carbon.ui.CarbonUIUtil;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 
 public class EventSimulatorUIUtils {

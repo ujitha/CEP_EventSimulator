@@ -19,14 +19,14 @@
         /**
           * Auto generated method signature
           * 
-                    * @param getEventDetails1
+                    * @param sendEventsViaFile8
                 
          */
 
          
-                     public void getEventDetails(
+                     public void sendEventsViaFile(
 
-                        org.wso2.carbon.event.simulator.stub.types.EventDto eventdetails2)
+                        java.lang.String fileName9)
                         throws java.rmi.RemoteException
              ;
 
@@ -34,12 +34,12 @@
          /**
             * Auto generated method signature for Asynchronous Invocations
             * 
-                * @param getEventDetails1
+                * @param sendEventsViaFile8
             
           */
-        public void startgetEventDetails(
+        public void startsendEventsViaFile(
 
-            org.wso2.carbon.event.simulator.stub.types.EventDto eventdetails2,
+            java.lang.String fileName9,
 
             final org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
 
@@ -50,12 +50,12 @@
         /**
           * Auto generated method signature
           * 
-                    * @param getAllEventStreamInfoDto4
+                    * @param getAllCSVFileInfo11
                 
          */
 
          
-                     public org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[] getAllEventStreamInfoDto(
+                     public org.wso2.carbon.event.simulator.stub.types.CSVFileInfoDto[] getAllCSVFileInfo(
 
                         )
                         throws java.rmi.RemoteException
@@ -65,7 +65,162 @@
          /**
             * Auto generated method signature for Asynchronous Invocations
             * 
-                * @param getAllEventStreamInfoDto4
+                * @param getAllCSVFileInfo11
+            
+          */
+        public void startgetAllCSVFileInfo(
+
+            
+
+            final org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
+
+            throws java.rmi.RemoteException;
+
+     
+
+        /**
+          * Auto generated method signature
+          * 
+                    * @param sendEvent14
+                
+         */
+
+         
+                     public void sendEvent(
+
+                        org.wso2.carbon.event.simulator.stub.types.EventDto eventDto15)
+                        throws java.rmi.RemoteException
+             ;
+
+        
+         /**
+            * Auto generated method signature for Asynchronous Invocations
+            * 
+                * @param sendEvent14
+            
+          */
+        public void startsendEvent(
+
+            org.wso2.carbon.event.simulator.stub.types.EventDto eventDto15,
+
+            final org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
+
+            throws java.rmi.RemoteException;
+
+     
+
+        /**
+          * Auto generated method signature
+          * 
+                    * @param deleteFile17
+                
+         */
+
+         
+                     public void deleteFile(
+
+                        java.lang.String fileName18)
+                        throws java.rmi.RemoteException
+             ;
+
+        
+         /**
+            * Auto generated method signature for Asynchronous Invocations
+            * 
+                * @param deleteFile17
+            
+          */
+        public void startdeleteFile(
+
+            java.lang.String fileName18,
+
+            final org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
+
+            throws java.rmi.RemoteException;
+
+     
+
+        /**
+          * Auto generated method signature
+          * 
+                    * @param uploadService20
+                
+         */
+
+         
+                     public void uploadService(
+
+                        org.wso2.carbon.event.simulator.stub.types.UploadedFileItemDto[] fileItems21)
+                        throws java.rmi.RemoteException
+             ;
+
+        
+         /**
+            * Auto generated method signature for Asynchronous Invocations
+            * 
+                * @param uploadService20
+            
+          */
+        public void startuploadService(
+
+            org.wso2.carbon.event.simulator.stub.types.UploadedFileItemDto[] fileItems21,
+
+            final org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
+
+            throws java.rmi.RemoteException;
+
+     
+
+        /**
+          * Auto generated method signature
+          * 
+                    * @param sendConfigDetails23
+                
+         */
+
+         
+                     public void sendConfigDetails(
+
+                        java.lang.String fileName24,java.lang.String streamId25,java.lang.String separateChar26)
+                        throws java.rmi.RemoteException
+             ;
+
+        
+         /**
+            * Auto generated method signature for Asynchronous Invocations
+            * 
+                * @param sendConfigDetails23
+            
+          */
+        public void startsendConfigDetails(
+
+            java.lang.String fileName24,java.lang.String streamId25,java.lang.String separateChar26,
+
+            final org.wso2.carbon.event.simulator.stub.EventSimulatorAdminServiceCallbackHandler callback)
+
+            throws java.rmi.RemoteException;
+
+     
+
+        /**
+          * Auto generated method signature
+          * 
+                    * @param getAllEventStreamInfoDto28
+                
+         */
+
+         
+                     public org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[] getAllEventStreamInfoDto(
+
+                        )
+                        throws java.rmi.RemoteException
+             ;
+
+        
+         /**
+            * Auto generated method signature for Asynchronous Invocations
+            * 
+                * @param getAllEventStreamInfoDto28
             
           */
         public void startgetAllEventStreamInfoDto(

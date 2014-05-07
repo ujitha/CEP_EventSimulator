@@ -45,18 +45,94 @@
 
         
            /**
-            * auto generated Axis2 call back method for getEventDetails method
-            * override this method for handling normal response from getEventDetails operation
+            * auto generated Axis2 call back method for sendEventsViaFile method
+            * override this method for handling normal response from sendEventsViaFile operation
             */
-           public void receiveResultgetEventDetails(
+           public void receiveResultsendEventsViaFile(
                     ) {
            }
 
           /**
            * auto generated Axis2 Error handler
-           * override this method for handling error response from getEventDetails operation
+           * override this method for handling error response from sendEventsViaFile operation
            */
-            public void receiveErrorgetEventDetails(java.lang.Exception e) {
+            public void receiveErrorsendEventsViaFile(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for getAllCSVFileInfo method
+            * override this method for handling normal response from getAllCSVFileInfo operation
+            */
+           public void receiveResultgetAllCSVFileInfo(
+                    org.wso2.carbon.event.simulator.stub.types.CSVFileInfoDto[] result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from getAllCSVFileInfo operation
+           */
+            public void receiveErrorgetAllCSVFileInfo(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for sendEvent method
+            * override this method for handling normal response from sendEvent operation
+            */
+           public void receiveResultsendEvent(
+                    ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from sendEvent operation
+           */
+            public void receiveErrorsendEvent(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for deleteFile method
+            * override this method for handling normal response from deleteFile operation
+            */
+           public void receiveResultdeleteFile(
+                    ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from deleteFile operation
+           */
+            public void receiveErrordeleteFile(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for uploadService method
+            * override this method for handling normal response from uploadService operation
+            */
+           public void receiveResultuploadService(
+                    ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from uploadService operation
+           */
+            public void receiveErroruploadService(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for sendConfigDetails method
+            * override this method for handling normal response from sendConfigDetails operation
+            */
+           public void receiveResultsendConfigDetails(
+                    ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from sendConfigDetails operation
+           */
+            public void receiveErrorsendConfigDetails(java.lang.Exception e) {
             }
                 
            /**
@@ -64,7 +140,7 @@
             * override this method for handling normal response from getAllEventStreamInfoDto operation
             */
            public void receiveResultgetAllEventStreamInfoDto(
-                    org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[] result
+                    org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[] result
                         ) {
            }
 

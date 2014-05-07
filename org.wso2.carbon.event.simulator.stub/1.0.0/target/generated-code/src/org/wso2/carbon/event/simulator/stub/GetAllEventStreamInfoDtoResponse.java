@@ -31,7 +31,7 @@
                         */
 
                         
-                                    protected org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[] local_return ;
+                                    protected org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[] local_return ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
@@ -47,9 +47,9 @@
 
                            /**
                            * Auto generated getter method
-                           * @return org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[]
+                           * @return org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[]
                            */
-                           public  org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[] get_return(){
+                           public  org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[] get_return(){
                                return local_return;
                            }
 
@@ -61,7 +61,7 @@
                               /**
                                * validate the array for _return
                                */
-                              protected void validate_return(org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[] param){
+                              protected void validate_return(org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[] param){
                              
                               }
 
@@ -70,7 +70,7 @@
                               * Auto generated setter method
                               * @param param _return
                               */
-                              public void set_return(org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[] param){
+                              public void set_return(org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[] param){
                               
                                    validate_return(param);
 
@@ -83,11 +83,11 @@
                              
                              /**
                              * Auto generated add method for the array for convenience
-                             * @param param org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto
+                             * @param param org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto
                              */
-                             public void add_return(org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto param){
+                             public void add_return(org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto param){
                                    if (local_return == null){
-                                   local_return = new org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[]{};
+                                   local_return = new org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[]{};
                                    }
 
                             
@@ -99,8 +99,8 @@
                             org.apache.axis2.databinding.utils.ConverterUtil.toList(local_return);
                                list.add(param);
                                this.local_return =
-                             (org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[])list.toArray(
-                            new org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[list.size()]);
+                             (org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[])list.toArray(
+                            new org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[list.size()]);
 
                              }
                              
@@ -486,7 +486,7 @@
                                                               list1.add(null);
                                                               reader.next();
                                                           } else {
-                                                        list1.add(org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto.Factory.parse(reader));
+                                                        list1.add(org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto.Factory.parse(reader));
                                                                 }
                                                         //loop until we find a start element that is not part of this array
                                                         boolean loopDone1 = false;
@@ -510,7 +510,7 @@
                                                                           list1.add(null);
                                                                           reader.next();
                                                                       } else {
-                                                                    list1.add(org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto.Factory.parse(reader));
+                                                                    list1.add(org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto.Factory.parse(reader));
                                                                         }
                                                                 }else{
                                                                     loopDone1 = true;
@@ -519,9 +519,9 @@
                                                         }
                                                         // call the converter utility  to convert and set the array
                                                         
-                                                        object.set_return((org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto[])
+                                                        object.set_return((org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto[])
                                                             org.apache.axis2.databinding.utils.ConverterUtil.convertToArray(
-                                                                org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto.class,
+                                                                org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto.class,
                                                                 list1));
                                                             
                               }  // End of if for expected property start element

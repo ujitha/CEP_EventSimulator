@@ -23,9 +23,29 @@
               
                   if (
                   "http://admin.simulator.event.carbon.wso2.org/xsd".equals(namespaceURI) &&
-                  "EventStreamAttributeValuesDto".equals(typeName)){
+                  "CSVFileInfoDto".equals(typeName)){
                    
-                            return  org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeValuesDto.Factory.parse(reader);
+                            return  org.wso2.carbon.event.simulator.stub.types.CSVFileInfoDto.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://admin.simulator.event.carbon.wso2.org/xsd".equals(namespaceURI) &&
+                  "StreamAttributeDto".equals(typeName)){
+                   
+                            return  org.wso2.carbon.event.simulator.stub.types.StreamAttributeDto.Factory.parse(reader);
+                        
+
+                  }
+
+              
+                  if (
+                  "http://admin.simulator.event.carbon.wso2.org/xsd".equals(namespaceURI) &&
+                  "StreamDefinitionInfoDto".equals(typeName)){
+                   
+                            return  org.wso2.carbon.event.simulator.stub.types.StreamDefinitionInfoDto.Factory.parse(reader);
                         
 
                   }
@@ -43,19 +63,9 @@
               
                   if (
                   "http://admin.simulator.event.carbon.wso2.org/xsd".equals(namespaceURI) &&
-                  "EventStreamInfoDto".equals(typeName)){
+                  "UploadedFileItemDto".equals(typeName)){
                    
-                            return  org.wso2.carbon.event.simulator.stub.types.EventStreamInfoDto.Factory.parse(reader);
-                        
-
-                  }
-
-              
-                  if (
-                  "http://admin.simulator.event.carbon.wso2.org/xsd".equals(namespaceURI) &&
-                  "EventStreamAttributeDto".equals(typeName)){
-                   
-                            return  org.wso2.carbon.event.simulator.stub.types.EventStreamAttributeDto.Factory.parse(reader);
+                            return  org.wso2.carbon.event.simulator.stub.types.UploadedFileItemDto.Factory.parse(reader);
                         
 
                   }
