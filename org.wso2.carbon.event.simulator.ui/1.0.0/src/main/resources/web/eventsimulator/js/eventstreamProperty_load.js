@@ -169,7 +169,8 @@ function sendEvent(form) {
                     }
                 }
                 else {
-                    CARBON.showErrorDialog("Error sending event -"+"\n\n" + msg);
+                    var message="Error Sending event"+"\n"+msg;
+                    CARBON.showErrorDialog(message);
 
                 }
             }

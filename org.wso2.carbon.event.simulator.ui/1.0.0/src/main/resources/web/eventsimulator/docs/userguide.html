@@ -27,22 +27,34 @@
 <h1>Event Simulator</h1>
 
 
-<p>Event Simulator is a tool that can be used to simulate the Event Streams that are predefined. These Event Stream definitions has stream attributes, using Event Simulator event can be created by assigning values to the stream attributes and send as an event.</p>
+<p>Event Simulator is a tool that can be used to simulate the Event Streams that are predefined.Event Simulator can be used to create and send single event as well as multiple events.</p>
 
 <h2>How to use the Event Simulator</h2>
 
 <p>1. Start the CEP, log in to the management console , select  <strong>Tools</strong> and
     click <strong>Event Simulator</strong>.</p>
 
+<h3>Send Single Events</h3>
+
 <p>2.Select the Event Stream from the drop down , then enter the attribute value to the generated form </p>
+<p><br/><img src="../images/sendSingleEventUI.png" alt="Event Simulator"/></p>
 
-<p><br/><img src="../images/eventSimulatorUI.jpg" alt="Event Simulator"/></p>
+<p>3.Finally click the <strong>send</strong> button then the Events are sent to any component that this Event Stream is defined such as Event adapter, Event Formatter , Execution plan and etc.</p>
 
-<p>Finally click the <strong>send</strong> button then the Events are sent to any component that this Event Stream is defined such as Event adapter, Event Formatter , Execution plan and etc.</p>
-   <p> This tool can be used to debugging and monitoring the Event Input/Output adapters , Execution plans and Event Formatters.
-</p>
+<h3>Send Multiple Events</h3>
+<p><img src="../images/sendMultipleEventsUI.png" alt="Event Simulator"/></p>
 
+<p>4.Choose a CSV file that contains the event details and upload it </p>
+<p>5.Configure the uploaded file for target Event Stream</p>
+<p><br/><img src="../images/configurePopUp.png" alt="Event Simulator"/></p>
 
+<p>6.Select the target Event Stream from the drop down list</p>
+<p>7.Set the File Delimiter value, Field delimiter is the character which separate the event detail values in an event detail in the file, Most of the times it is “,” comma.  </p>
+<p>8.Click the <strong>configure</strong> button</p>
+
+<p>9.After configure the file , click the <strong>Play</strong> button to create Events and send them to any component that Event stream is defined</p>
+
+<p><br/> This tool can be used to debugging and monitoring the Event Input/Output adapters , Execution plans and Event Formatters.</p>
 
 
 </body>

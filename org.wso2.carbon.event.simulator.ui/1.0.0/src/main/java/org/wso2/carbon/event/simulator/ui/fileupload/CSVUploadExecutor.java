@@ -67,11 +67,11 @@ public class CSVUploadExecutor extends AbstractFileUploadExecutor {
             return true;
         }
 
-        CSVUploaderClient uploaderClient=new CSVUploaderClient(configurationContext,serverURL+"EventSimulatorAdminService.EventSimulatorAdminServiceHttpsSoap12Endpoint",cookie);
+        CSVUploaderClient uploaderClient = new CSVUploaderClient(configurationContext, serverURL + "EventSimulatorAdminService.EventSimulatorAdminServiceHttpsSoap12Endpoint", cookie);
 
         File uploadedTempFile;
-        try{
-            for(FileItemData fileData : fileItemsMap.get("csvFileName")){
+        try {
+            for (FileItemData fileData : fileItemsMap.get("csvFileName")) {
                 String fileName = getFileName(fileData.getFileItem().getName());
 
                 //Check filename for \ charactors. This cannot be handled at the lower stages.
@@ -109,7 +109,7 @@ public class CSVUploadExecutor extends AbstractFileUploadExecutor {
 
             return true;
 
-        }catch(Exception e){
+        } catch (Exception e) {
             errMsg = "File upload failed :" + e.getMessage();
             log.error(errMsg, e);
             CarbonUIMessage.sendCarbonUIMessage(errMsg, CarbonUIMessage.ERROR, request,
