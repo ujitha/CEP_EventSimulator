@@ -1,8 +1,0 @@
-/home/ujitha/IdeaProjects/event-simulator/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/EventDto.java
-/home/ujitha/IdeaProjects/event-simulator/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminService.java
-/home/ujitha/IdeaProjects/event-simulator/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/EventStreamAttributeDto.java
-/home/ujitha/IdeaProjects/event-simulator/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/StreamDefinitionDto.java
-/home/ujitha/IdeaProjects/event-simulator/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/EventStreamInfoDto.java
-/home/ujitha/IdeaProjects/event-simulator/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/EventStreamAttributeValuesDto.java
-/home/ujitha/IdeaProjects/event-simulator/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminDS.java
-/home/ujitha/IdeaProjects/event-simulator/org.wso2.carbon.eventsimulator.admin/src/main/java/org/wso2/carbon/eventsimulator/admin/EventSimulatorAdminvalueHolder.java
